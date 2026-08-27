@@ -1,5 +1,4 @@
-// SIGIT - Sistema Integral de Gestion para Indumentaria Textil (version nucleo)
-// Pegar este contenido en https://dbdiagram.io
+// SIGIT - Base de datos para dbdiagram.io
 
 Table Rol {
   ID_rol int [pk, increment]

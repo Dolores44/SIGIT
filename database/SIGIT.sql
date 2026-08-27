@@ -1,5 +1,5 @@
 -- -!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-! 
--- Utilice IA para que me haga la converscioón de BDML a Maria DB.
+-- Se utilizara IA para añadir datos a la base de datos como ejemplo.
 -- Explico yo cada punto | La referencia guia esta en 06_Modelo_ER
 -- -!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-! 
 
