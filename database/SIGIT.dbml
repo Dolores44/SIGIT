@@ -1,0 +1,146 @@
+// SIGIT - Sistema Integral de Gestion para Indumentaria Textil (version nucleo)
+// Pegar este contenido en https://dbdiagram.io
+
+Table Rol {
+  ID_rol int [pk, increment]
+  nombre_rol varchar(50)
+}
+
+Table Usuario {
+  ID_usuario int [pk, increment]
+  nombre_completo varchar(100)
+  usuario_login varchar(50)
+  contrasena_hash varchar(255)
+  ID_rol int [ref: > Rol.ID_rol]
+  activo boolean
+}
+
+Table Categoria {
+  ID_categoria int [pk, increment]
+  nombre varchar(50)
+  descripcion varchar(255)
+}
+
+Table Producto {
+  ID_producto int [pk, increment]
+  ID_categoria int [ref: > Categoria.ID_categoria]
+  nombre varchar(100)
+  descripcion varchar(255)
+  tipo_producto varchar(50) // confeccionado / reventa
+}
+
+Table Producto_Variante {
+  ID_variante int [pk, increment]
+  ID_producto int [ref: > Producto.ID_producto]
+  color varchar(50)
+  talle varchar(20)
+  otra_caracteristica varchar(100)
+  precio_venta decimal(10,2)
+  stock_actual int
+  stock_minimo int
+}
+
+Table Insumo {
+  ID_insumo int [pk, increment]
+  ID_categoria int [ref: > Categoria.ID_categoria]
+  descripcion varchar(150)
+  unidad_medida varchar(20)
+  stock_actual decimal(10,2)
+  stock_minimo decimal(10,2)
+  costo_unitario decimal(10,2)
+}
+
+Table Ficha_Tecnica {
+  ID_ficha int [pk, increment]
+  ID_variante int [ref: > Producto_Variante.ID_variante]
+  ID_insumo int [ref: > Insumo.ID_insumo]
+  cantidad_utilizada decimal(10,2)
+}
+
+Table Cliente {
+  ID_cliente int [pk, increment]
+  nombre varchar(100)
+  telefono varchar(30)
+  email varchar(100)
+  direccion varchar(150)
+}
+
+Table Pedido {
+  ID_pedido int [pk, increment]
+  ID_cliente int [ref: > Cliente.ID_cliente]
+  fecha_pedido date
+  fecha_entrega_prevista date
+  estado varchar(30) // Pendiente / En produccion / Listo para retirar / Entregado
+  observaciones varchar(255)
+}
+
+Table Detalle_Pedido {
+  ID_detalle int [pk, increment]
+  ID_pedido int [ref: > Pedido.ID_pedido]
+  ID_variante int [ref: > Producto_Variante.ID_variante]
+  cantidad int
+  precio_unitario_momento decimal(10,2)
+  observaciones varchar(255)
+}
+
+Table Venta {
+  ID_venta int [pk, increment]
+  ID_pedido int [ref: > Pedido.ID_pedido] // nullable, venta de mostrador sin pedido
+  ID_cliente int [ref: > Cliente.ID_cliente]
+  ID_usuario int [ref: > Usuario.ID_usuario]
+  fecha date
+  total decimal(10,2)
+}
+
+Table Detalle_Venta {
+  ID_detalle_venta int [pk, increment]
+  ID_venta int [ref: > Venta.ID_venta]
+  ID_variante int [ref: > Producto_Variante.ID_variante]
+  cantidad int
+  precio_unitario decimal(10,2)
+}
+
+Table Pago {
+  ID_pago int [pk, increment]
+  ID_venta int [ref: > Venta.ID_venta]
+  fecha date
+  monto decimal(10,2)
+  tipo_pago varchar(30) // sena / parcial / saldo / total
+  metodo_pago varchar(30) // efectivo / transferencia / tarjeta
+  num_operacion varchar(50)
+}
+
+Table Produccion {
+  ID_produccion int [pk, increment]
+  ID_pedido int [ref: > Pedido.ID_pedido] // nullable, produccion para stock sin pedido
+  fecha_inicio date
+  fecha_fin_estimada date
+  fecha_fin_real date
+  estado varchar(30)
+  observaciones varchar(255)
+}
+
+Table Tanda_Produccion {
+  ID_tanda int [pk, increment]
+  ID_produccion int [ref: > Produccion.ID_produccion]
+  ID_variante int [ref: > Producto_Variante.ID_variante]
+  cantidad_planificada int
+  cantidad_producida int
+}
+
+Table Proceso {
+  ID_proceso int [pk, increment]
+  nombre varchar(50)
+  orden int
+}
+
+Table Seguimiento_Produccion {
+  ID_seguimiento int [pk, increment]
+  ID_tanda int [ref: > Tanda_Produccion.ID_tanda]
+  ID_proceso int [ref: > Proceso.ID_proceso]
+  cantidad int
+  estado varchar(30)
+  fecha_inicio date
+  fecha_finalizacion date
+  observaciones varchar(255)
+}
