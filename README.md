@@ -13,3 +13,5 @@ Proyecto final de Analista en Sistemas.
 - Proveedores
 - Pedidos
 - Usuarios
+
+Para la entrega del proyecto, se descarto "Proveedores" - VER 06_Modelo_ER.md
