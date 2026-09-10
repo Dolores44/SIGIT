@@ -31,12 +31,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="UCinsumos.vb" />
-    <Compile Update="UCproduccion.vb" />
-    <Compile Update="UCclientes.vb" />
-    <Compile Update="UCstock.vb" />
-    <Compile Update="UCproductos.vb" />
-    <Compile Update="UCpedidos.vb" />
+    <Compile Update="UserControl\UCinsumos.vb" />
+    <Compile Update="UserControl\UCproduccion.vb" />
+    <Compile Update="UserControl\UCclientes.vb" />
+    <Compile Update="UserControl\UCstock.vb" />
+    <Compile Update="UserControl\UCproductos.vb" />
+    <Compile Update="UserControl\UCpedidos.vb" />
   </ItemGroup>
 
   <ItemGroup>
