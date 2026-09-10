@@ -44,7 +44,7 @@ Partial Class Inicio
         Label6 = New Label()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
-        Panel10 = New Panel()
+        PanelControl = New Panel()
         Label3 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Class Inicio
         ' Label3
         ' 
         Label3.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(50))
-        Label3.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(2, 93)
         Label3.Margin = New Padding(0)
         Label3.Name = "Label3"
@@ -315,7 +315,7 @@ Partial Class Inicio
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Consolas", 8.0F, FontStyle.Bold)
+        Label6.Font = New Font("Consolas", 8F, FontStyle.Bold)
         Label6.ForeColor = SystemColors.ButtonFace
         Label6.Location = New Point(12, 659)
         Label6.Name = "Label6"
@@ -327,7 +327,7 @@ Partial Class Inicio
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Black", 18.0F, FontStyle.Bold Or FontStyle.Underline)
+        Label1.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold Or FontStyle.Underline)
         Label1.ForeColor = SystemColors.ButtonFace
         Label1.Location = New Point(71, 32)
         Label1.Name = "Label1"
@@ -348,20 +348,20 @@ Partial Class Inicio
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
-        ' Panel10
+        ' PanelControl
         ' 
-        Panel10.Location = New Point(183, 0)
-        Panel10.Name = "Panel10"
-        Panel10.Size = New Size(1224, 713)
-        Panel10.TabIndex = 1
+        PanelControl.Location = New Point(183, 0)
+        PanelControl.Name = "PanelControl"
+        PanelControl.Size = New Size(1224, 713)
+        PanelControl.TabIndex = 1
         ' 
         ' Inicio
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.GhostWhite
         ClientSize = New Size(1384, 691)
-        Controls.Add(Panel10)
+        Controls.Add(PanelControl)
         Controls.Add(Panel1)
         Name = "Inicio"
         Text = "Form2"
@@ -392,5 +392,5 @@ Partial Class Inicio
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Insumosbtn As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Panel10 As Panel
+    Friend WithEvents PanelControl As Panel
 End Class

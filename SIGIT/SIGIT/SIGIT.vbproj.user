@@ -7,6 +7,27 @@
     <Compile Update="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UCclientes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCdashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCinsumos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCpedidos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCproduccion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCproductos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCstock.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="My Project\Resources.resx">

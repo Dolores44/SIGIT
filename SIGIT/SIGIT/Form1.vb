@@ -24,6 +24,12 @@ Public Class LOGIN
 
     Private Sub LOGIN_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        'Pongo el placeholder de los textos
+        'Texto guia para saber que poner
+
+        usuariotxt.PlaceholderText = "Usuario"
+        contraseñatxt.PlaceholderText = "Contraseña"
+
         'Pongo conexion al cargar, es para ver si esta conectado desde un principio
         Try
             Using CN As New MySqlConnection(CADENA)
