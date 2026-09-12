@@ -24,6 +24,9 @@ Partial Class UCpedidos
     Private Sub InitializeComponent()
         labeltexto = New Label()
         Panel1 = New Panel()
+        comboestado = New ComboBox()
+        Añadirbtn = New Button()
+        eliminarbtn = New Button()
         Label2 = New Label()
         Button1 = New Button()
         dashboardbtn = New Button()
@@ -35,8 +38,6 @@ Partial Class UCpedidos
         buscarlbl = New Label()
         dgwpedidos = New DataGridView()
         Panel2 = New Panel()
-        eliminarbtn = New Button()
-        Añadirbtn = New Button()
         Panel1.SuspendLayout()
         CType(dgwpedidos, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -59,6 +60,7 @@ Partial Class UCpedidos
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(comboestado)
         Panel1.Controls.Add(Añadirbtn)
         Panel1.Controls.Add(eliminarbtn)
         Panel1.Controls.Add(Label2)
@@ -75,6 +77,50 @@ Partial Class UCpedidos
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1224, 109)
         Panel1.TabIndex = 1
+        ' 
+        ' comboestado
+        ' 
+        comboestado.FormattingEnabled = True
+        comboestado.Location = New Point(338, 42)
+        comboestado.Name = "comboestado"
+        comboestado.Size = New Size(121, 23)
+        comboestado.TabIndex = 10
+        ' 
+        ' Añadirbtn
+        ' 
+        Añadirbtn.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
+        Añadirbtn.FlatAppearance.BorderSize = 0
+        Añadirbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        Añadirbtn.FlatStyle = FlatStyle.Flat
+        Añadirbtn.Font = New Font("Segoe UI", 10F)
+        Añadirbtn.ForeColor = Color.GhostWhite
+        Añadirbtn.Image = My.Resources.Resources.añadir
+        Añadirbtn.ImageAlign = ContentAlignment.TopLeft
+        Añadirbtn.Location = New Point(881, 39)
+        Añadirbtn.Name = "Añadirbtn"
+        Añadirbtn.Size = New Size(81, 25)
+        Añadirbtn.TabIndex = 9
+        Añadirbtn.Text = "Añadir "
+        Añadirbtn.TextImageRelation = TextImageRelation.ImageBeforeText
+        Añadirbtn.UseVisualStyleBackColor = False
+        ' 
+        ' eliminarbtn
+        ' 
+        eliminarbtn.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
+        eliminarbtn.FlatAppearance.BorderSize = 0
+        eliminarbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        eliminarbtn.FlatStyle = FlatStyle.Flat
+        eliminarbtn.Font = New Font("Segoe UI", 10F)
+        eliminarbtn.ForeColor = Color.GhostWhite
+        eliminarbtn.Image = My.Resources.Resources.eliminar
+        eliminarbtn.ImageAlign = ContentAlignment.TopLeft
+        eliminarbtn.Location = New Point(990, 39)
+        eliminarbtn.Name = "eliminarbtn"
+        eliminarbtn.Size = New Size(81, 25)
+        eliminarbtn.TabIndex = 8
+        eliminarbtn.Text = "Eliminar"
+        eliminarbtn.TextImageRelation = TextImageRelation.ImageBeforeText
+        eliminarbtn.UseVisualStyleBackColor = False
         ' 
         ' Label2
         ' 
@@ -179,7 +225,7 @@ Partial Class UCpedidos
         dgwpedidos.Name = "dgwpedidos"
         dgwpedidos.ReadOnly = True
         dgwpedidos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgwpedidos.Size = New Size(1163, 464)
+        dgwpedidos.Size = New Size(1163, 432)
         dgwpedidos.TabIndex = 0
         ' 
         ' Panel2
@@ -190,42 +236,6 @@ Partial Class UCpedidos
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1224, 566)
         Panel2.TabIndex = 2
-        ' 
-        ' eliminarbtn
-        ' 
-        eliminarbtn.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
-        eliminarbtn.FlatAppearance.BorderSize = 0
-        eliminarbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
-        eliminarbtn.FlatStyle = FlatStyle.Flat
-        eliminarbtn.Font = New Font("Segoe UI", 10F)
-        eliminarbtn.ForeColor = Color.GhostWhite
-        eliminarbtn.Image = My.Resources.Resources.eliminar
-        eliminarbtn.ImageAlign = ContentAlignment.TopLeft
-        eliminarbtn.Location = New Point(990, 39)
-        eliminarbtn.Name = "eliminarbtn"
-        eliminarbtn.Size = New Size(81, 25)
-        eliminarbtn.TabIndex = 8
-        eliminarbtn.Text = "Eliminar"
-        eliminarbtn.TextImageRelation = TextImageRelation.ImageBeforeText
-        eliminarbtn.UseVisualStyleBackColor = False
-        ' 
-        ' Añadirbtn
-        ' 
-        Añadirbtn.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
-        Añadirbtn.FlatAppearance.BorderSize = 0
-        Añadirbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
-        Añadirbtn.FlatStyle = FlatStyle.Flat
-        Añadirbtn.Font = New Font("Segoe UI", 10F)
-        Añadirbtn.ForeColor = Color.GhostWhite
-        Añadirbtn.Image = My.Resources.Resources.añadir
-        Añadirbtn.ImageAlign = ContentAlignment.TopLeft
-        Añadirbtn.Location = New Point(881, 39)
-        Añadirbtn.Name = "Añadirbtn"
-        Añadirbtn.Size = New Size(81, 25)
-        Añadirbtn.TabIndex = 9
-        Añadirbtn.Text = "Añadir "
-        Añadirbtn.TextImageRelation = TextImageRelation.ImageBeforeText
-        Añadirbtn.UseVisualStyleBackColor = False
         ' 
         ' UCpedidos
         ' 
@@ -258,5 +268,6 @@ Partial Class UCpedidos
     Friend WithEvents Label2 As Label
     Friend WithEvents Añadirbtn As Button
     Friend WithEvents eliminarbtn As Button
+    Friend WithEvents comboestado As ComboBox
 
 End Class

@@ -65,7 +65,7 @@ Partial Class LOGIN
         ' 
         Label7.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label7.BackColor = Color.GhostWhite
-        Label7.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(939, -35)
         Label7.Margin = New Padding(0)
         Label7.Name = "Label7"
@@ -75,7 +75,7 @@ Partial Class LOGIN
         ' Label8
         ' 
         Label8.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(50))
-        Label8.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.Location = New Point(-2, 638)
         Label8.Margin = New Padding(0)
         Label8.Name = "Label8"
@@ -85,7 +85,7 @@ Partial Class LOGIN
         ' Label10
         ' 
         Label10.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(50))
-        Label10.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.Location = New Point(87, 262)
         Label10.Margin = New Padding(0)
         Label10.Name = "Label10"
@@ -95,7 +95,7 @@ Partial Class LOGIN
         ' Label3
         ' 
         Label3.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(50))
-        Label3.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(87, 276)
         Label3.Margin = New Padding(0)
         Label3.Name = "Label3"
@@ -105,7 +105,7 @@ Partial Class LOGIN
         ' Label11
         ' 
         Label11.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(50))
-        Label11.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.Location = New Point(87, 288)
         Label11.Margin = New Padding(0)
         Label11.Name = "Label11"
@@ -115,7 +115,7 @@ Partial Class LOGIN
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Constantia", 48.0F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Constantia", 48F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ButtonFace
         Label1.Location = New Point(174, 164)
         Label1.Name = "Label1"
@@ -127,7 +127,7 @@ Partial Class LOGIN
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Constantia", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Constantia", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonFace
         Label2.Location = New Point(177, 239)
         Label2.Name = "Label2"
@@ -158,7 +158,7 @@ Partial Class LOGIN
         Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.BackColor = Color.GhostWhite
-        Label4.Font = New Font("Constantia", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Constantia", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Black
         Label4.Location = New Point(1041, 216)
         Label4.Name = "Label4"
@@ -172,7 +172,7 @@ Partial Class LOGIN
         Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label5.AutoSize = True
         Label5.BackColor = Color.GhostWhite
-        Label5.Font = New Font("Constantia", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Constantia", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Black
         Label5.Location = New Point(1041, 302)
         Label5.Name = "Label5"
@@ -192,7 +192,7 @@ Partial Class LOGIN
         ' Iniciosesion
         ' 
         Iniciosesion.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Iniciosesion.Font = New Font("Dubai", 12.0F, FontStyle.Bold)
+        Iniciosesion.Font = New Font("Dubai", 12F, FontStyle.Bold)
         Iniciosesion.Location = New Point(1039, 406)
         Iniciosesion.Name = "Iniciosesion"
         Iniciosesion.Size = New Size(260, 47)
@@ -228,10 +228,10 @@ Partial Class LOGIN
         ' 
         Label9.Font = New Font("Consolas", 9.75F, FontStyle.Bold)
         Label9.ForeColor = SystemColors.ButtonFace
-        Label9.Location = New Point(827, 656)
+        Label9.Location = New Point(825, 656)
         Label9.Name = "Label9"
         Label9.RightToLeft = RightToLeft.No
-        Label9.Size = New Size(88, 19)
+        Label9.Size = New Size(96, 19)
         Label9.TabIndex = 16
         ' 
         ' PictureBox4
@@ -275,7 +275,7 @@ Partial Class LOGIN
         Label12.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label12.AutoSize = True
         Label12.BackColor = Color.GhostWhite
-        Label12.Font = New Font("Dubai Medium", 21.0F, FontStyle.Bold)
+        Label12.Font = New Font("Dubai Medium", 21F, FontStyle.Bold)
         Label12.ForeColor = Color.Black
         Label12.Location = New Point(1040, 142)
         Label12.Name = "Label12"
@@ -289,7 +289,7 @@ Partial Class LOGIN
         Label13.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label13.AutoSize = True
         Label13.BackColor = Color.GhostWhite
-        Label13.Font = New Font("Constantia", 8.0F, FontStyle.Italic)
+        Label13.Font = New Font("Constantia", 8F, FontStyle.Italic)
         Label13.ForeColor = Color.Black
         Label13.Location = New Point(1061, 179)
         Label13.Name = "Label13"
@@ -311,7 +311,7 @@ Partial Class LOGIN
         ' 
         PictureBox5.BackColor = Color.Transparent
         PictureBox5.Image = My.Resources.Resources.spool_logo_large
-        PictureBox5.Location = New Point(803, 652)
+        PictureBox5.Location = New Point(798, 652)
         PictureBox5.Margin = New Padding(0)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(23, 28)
@@ -324,7 +324,7 @@ Partial Class LOGIN
         usererrorlbl.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         usererrorlbl.AutoSize = True
         usererrorlbl.BackColor = Color.GhostWhite
-        usererrorlbl.Font = New Font("Constantia", 9.0F, FontStyle.Italic)
+        usererrorlbl.Font = New Font("Constantia", 9F, FontStyle.Italic)
         usererrorlbl.ForeColor = Color.Black
         usererrorlbl.Location = New Point(1039, 271)
         usererrorlbl.Name = "usererrorlbl"
@@ -337,7 +337,7 @@ Partial Class LOGIN
         contraerrorlbl.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         contraerrorlbl.AutoSize = True
         contraerrorlbl.BackColor = Color.GhostWhite
-        contraerrorlbl.Font = New Font("Constantia", 9.0F, FontStyle.Italic)
+        contraerrorlbl.Font = New Font("Constantia", 9F, FontStyle.Italic)
         contraerrorlbl.ForeColor = Color.Black
         contraerrorlbl.Location = New Point(1041, 350)
         contraerrorlbl.Name = "contraerrorlbl"
@@ -348,7 +348,7 @@ Partial Class LOGIN
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Constantia", 15.0F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Constantia", 15F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = SystemColors.ButtonFace
         Label14.Location = New Point(87, 397)
         Label14.Name = "Label14"
@@ -369,7 +369,7 @@ Partial Class LOGIN
         ' 
         ' LOGIN
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
         ClientSize = New Size(1384, 691)
