@@ -43,4 +43,8 @@ Public Class Inicio
     Private Sub clientesbtn_Click(sender As Object, e As EventArgs) Handles clientesbtn.Click
         CambiarPanel(New UCclientes)
     End Sub
+
+    Private Sub PanelControl_Paint(sender As Object, e As PaintEventArgs) Handles PanelControl.Paint
+
+    End Sub
 End Class

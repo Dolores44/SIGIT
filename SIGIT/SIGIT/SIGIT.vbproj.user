@@ -25,6 +25,9 @@
     <Compile Update="UserControl\UCproductos.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControl\UCproductoslista.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControl\UCstock.vb">
       <SubType>UserControl</SubType>
     </Compile>

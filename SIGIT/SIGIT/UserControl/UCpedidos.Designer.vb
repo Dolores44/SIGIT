@@ -220,7 +220,7 @@ Partial Class UCpedidos
         ' 
         dgwpedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgwpedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgwpedidos.Location = New Point(26, 18)
+        dgwpedidos.Location = New Point(17, 20)
         dgwpedidos.MultiSelect = False
         dgwpedidos.Name = "dgwpedidos"
         dgwpedidos.ReadOnly = True
