@@ -8,7 +8,6 @@
 - [x] 04_Reglas_de_negocio.md
 - [x] 03_Modelo_Entidad_Relacion.md (version nucleo, sin Compra/Aviso/Proveedores)
 - [x] Backlog en Jira (9 epicas cargadas)
-- [ ] Subtareas del backlog
 - [ ] Encuesta a la jefa (dueña del taller) sobre casos puntuales
 - [ ] Diagrama DFD
 - [x] Historias de usuario
@@ -35,7 +34,7 @@
 - [x] Menu lateral (Panel1) con botones por seccion
 - [x] Panel de contenido dinamico (panelcontenido) con Dock=Fill
 - [x] Subrutina cargarpanel para intercambiar UserControls
-- [x] Carpetas organizadas: Modulos/ y UserControl/
+- [x] Carpetas organizadas: Modulos/ | UserControl/ | Otrosforms/
 
 ## 5. Modulos reutilizables
 
@@ -56,7 +55,7 @@
   - [ ] Modificar pedido (Form modal aparte, con ID_pedido pasado por constructor)
   - [ ] Eliminar/dar de baja pedido
 - [ ] Productos (UCproductos)
-  - [ ] Catalogo en tarjetas (FlowLayoutPanel + UcTarjetaProducto)
+  - [x] Catalogo en tarjetas (FlowLayoutPanel + UcTarjetaProducto)
   - [ ] Paginacion con LIMIT/OFFSET
   - [ ] Alta/edicion de producto y variante
 - [ ] Stock (UCstock)
@@ -68,6 +67,7 @@
 - [ ] Proveedores -- evaluar si entra en el alcance final
 - [ ] Pagos
 
+- [x] DML o SCRUD de CATEGORIAS, para INSUMOS y Productos
 
 
 ## 7. Git / GitHub
@@ -81,4 +81,4 @@
 
 - [ ] Confirmar con el profe si estado va como ENUM (actual) o como tabla aparte
 - [ ] Definir bien "Total Cobrado" en Pedidos: total del pedido vs. suma de pagos
-- [ ] Ver como el profe explica el manejo de imagenes antes de tocar Producto_Variante
+- [ ] Ver como el profe explica el manejo de imagenes antes de tocar Producto_Variante 

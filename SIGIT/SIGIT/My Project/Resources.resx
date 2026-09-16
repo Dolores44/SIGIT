@@ -160,13 +160,16 @@
   <data name="maquinadecoser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\maquinadecoser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="añadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\añadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="base de datos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\base de datos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pedidos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\pedidos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="añadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\añadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="volver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\volver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

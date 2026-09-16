@@ -1,7 +1,7 @@
 ﻿Imports MySqlConnector
 
 Public Class UCproductos
-
+    Private formcategoria As UCproductoscategoria = Nothing '
     Sub cargarproductos()
 
         Try
@@ -48,6 +48,15 @@ Public Class UCproductos
         cargarproductos()
     End Sub
     Private Sub labeltexto_Click(sender As Object, e As EventArgs) Handles labeltexto.Click
+
+    End Sub
+
+    Private Sub Añadirbtn_Click(sender As Object, e As EventArgs) Handles Añadirbtn.Click
+
+        ' abro el form de categorias
+        Using nuevoform As New UCproductoscategoria()
+            nuevoform.ShowDialog()
+        End Using
 
     End Sub
 End Class

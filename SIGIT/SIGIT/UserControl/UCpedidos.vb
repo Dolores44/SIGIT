@@ -122,5 +122,11 @@ Public Class UCpedidos
 
     End Sub
 
+    Private Sub dgwpedidos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgwpedidos.CellContentClick
 
+    End Sub
+
+    Private Sub labeltexto_Click(sender As Object, e As EventArgs) Handles labeltexto.Click
+
+    End Sub
 End Class

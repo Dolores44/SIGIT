@@ -35,12 +35,12 @@ Partial Class UCinsumos
         Label1.TabIndex = 0
         Label1.Text = "funciono"
         ' 
-        ' UCdashboard
+        ' UCinsumos
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(Label1)
-        Name = "UCdashboard"
+        Name = "UCinsumos"
         Size = New Size(1224, 713)
         ResumeLayout(False)
         PerformLayout()

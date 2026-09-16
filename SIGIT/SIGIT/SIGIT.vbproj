@@ -34,6 +34,7 @@
     <Compile Update="UserControl\UCinsumos.vb" />
     <Compile Update="UserControl\UCproduccion.vb" />
     <Compile Update="UserControl\UCclientes.vb" />
+    <Compile Update="Subforms\UCproductoscategoria.vb" />
     <Compile Update="UserControl\UCstock.vb" />
     <Compile Update="UserControl\UCproductos.vb" />
     <Compile Update="UserControl\UCpedidos.vb" />

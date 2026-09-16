@@ -143,9 +143,9 @@ Partial Class UCproductos
         categorialbl.Font = New Font("Segoe UI", 10F)
         categorialbl.Location = New Point(327, 35)
         categorialbl.Name = "categorialbl"
-        categorialbl.Size = New Size(53, 19)
+        categorialbl.Size = New Size(71, 19)
         categorialbl.TabIndex = 3
-        categorialbl.Text = "Estado:"
+        categorialbl.Text = "Categoria:"
         ' 
         ' buscartxt
         ' 
