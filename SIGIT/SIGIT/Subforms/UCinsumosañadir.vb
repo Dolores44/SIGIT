@@ -1,14 +1,16 @@
 ﻿Imports MySqlConnector
 
-Public Class UCproductoscategoria
+Public Class UCinsumosañadir
 
 
-    Private Sub cargarcategorias()
+
+    Private Sub cargarinsumo()
         Try
             Using cn As New MySqlConnection(CADENA)
                 cn.Open()
 
-                Dim sql As String = "SELECT * FROM categoria ORDER BY ID_categoria;"
+                Dim sql As String = "SELECT ID_insumo AS ID, ID_categoria AS Categoria, descripcion, unidad_medida AS `Unidad Medida`, stock_actual AS `Stock Actual`, stock_minimo AS `Stock minimo`, costo_unitario AS `Costo Unitario`, nombre " &
+                                    "FROM insumo ORDER BY ID_insumo;"
 
                 Using cmd As New MySqlCommand(sql, cn)
                     Dim tabla As New DataTable()
@@ -25,16 +27,23 @@ Public Class UCproductoscategoria
         End Try
     End Sub
     Private Sub borrartexts()
-        categoriatxt.Clear()
-        codigotxt.Clear()
+        'borro todos los textbox para que no queden datos viejos
+        Stockmintxt.Clear()
+        costoUnitxt.Clear()
+        stockacttxt.Clear()
+        nombreinsumo.Clear()
         descripciontxt.Clear()
+        Dim medidas As List(Of String) = New List(Of String) From {"Centimetro", "Metro", "Unidad", "Pulgadas", "Milimetro", "Docena"} 'Creo un array de medidas para que el usuario no tenga que escribirlo, sino que lo seleccione
+        unidadcombobox.DataSource = medidas
+        unidadcombobox.SelectedIndex = 0 'Selecciono el primer elemento del array, que es centimetro
+
     End Sub
 
 
     Private Sub UCproductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GrillaPers.Personalizargrilla(dgwcat) 'que lindo hacer modulos que se ocupen despues
         borrartexts()
-        cargarcategorias()
+        cargarinsumo()
     End Sub
 
 
@@ -43,10 +52,17 @@ Public Class UCproductoscategoria
         Me.Close()
     End Sub
 
+    '
+    '
+    '
+    'ACA ME QUEDE 17/9 2026
+    '
+    '
+
     Private Sub Añadirbtn_Click(sender As Object, e As EventArgs) Handles Añadirbtn.Click
 
-        If Not Validaciones.Validaciones(categoriatxt, lblerrorcat, " La categoría no debe estar vacia") Then Exit Sub
-        If Not Validaciones.Validaciones(codigotxt, errorcodigo, " El codigo no debe estar vacio") Then Exit Sub
+        If Not Validaciones.Validaciones(stockacttxt, lblerrorcat, " La categoría no debe estar vacia") Then Exit Sub
+        If Not Validaciones.Validaciones(nombreinsumo, errorcodigo, " El codigo no debe estar vacio") Then Exit Sub
         'Conectamos a la base de datos para la carga
         Using cn As New MySqlConnection(CADENA)
             cn.Open()
@@ -55,9 +71,9 @@ Public Class UCproductoscategoria
                                      " VALUES (@nombre, @descripcion, @codigo);"
 
             Using cmd As New MySqlCommand(consulta, cn)
-                cmd.Parameters.AddWithValue("@nombre", categoriatxt.Text.Trim) 'Cargo los valores que estan en los textbox
+                cmd.Parameters.AddWithValue("@nombre", stockacttxt.Text.Trim) 'Cargo los valores que estan en los textbox
                 cmd.Parameters.AddWithValue("@descripcion", descripciontxt.Text.Trim)
-                cmd.Parameters.AddWithValue("@codigo", codigotxt.Text.Trim)
+                cmd.Parameters.AddWithValue("@codigo", nombreinsumo.Text.Trim)
 
                 'ejecuto consulta
                 Dim resultado As Integer = cmd.ExecuteNonQuery()
@@ -67,7 +83,8 @@ Public Class UCproductoscategoria
 
         End Using
         borrartexts()
-        cargarcategorias()
+        cargarinsumo()
+
     End Sub
 
     Private Sub eliminarbtn_Click(sender As Object, e As EventArgs) Handles eliminarbtn.Click
@@ -95,7 +112,8 @@ Public Class UCproductoscategoria
             MessageBox.Show("Error! " & ex.Message)
 
         End Try
-        cargarcategorias()
+        cargarinsumo()
+
     End Sub
 
     Private Sub Editarcat_Click(sender As Object, e As EventArgs) Handles Editarcat.Click
@@ -113,8 +131,8 @@ Public Class UCproductoscategoria
                 Dim consulta As String = "UPDATE categoria SET nombre=@nombre, descripcion=@descripcion, codigo=@codigo WHERE ID_categoria=@ID "
                 Using cmd As New MySqlCommand(consulta, cn)
                     cmd.Parameters.AddWithValue("@ID", dgwcat.SelectedRows(0).Cells("ID_categoria").Value) 'Mismo procedimiento de antes
-                    cmd.Parameters.AddWithValue("@nombre", categoriatxt.Text.Trim)
-                    cmd.Parameters.AddWithValue("@codigo", codigotxt.Text.Trim)
+                    cmd.Parameters.AddWithValue("@nombre", stockacttxt.Text.Trim)
+                    cmd.Parameters.AddWithValue("@codigo", nombreinsumo.Text.Trim)
                     cmd.Parameters.AddWithValue("@descripcion", descripciontxt.Text.Trim)
 
                     Dim resultado As Integer = cmd.ExecuteNonQuery()
@@ -126,7 +144,7 @@ Public Class UCproductoscategoria
             MessageBox.Show("Error! " & ex.Message)
         End Try
 
-        cargarcategorias()
+        cargarinsumo()
         borrartexts()
 
     End Sub
@@ -136,13 +154,21 @@ Public Class UCproductoscategoria
 
         If e.RowIndex >= 0 Then
             descripciontxt.Text = dgwcat.Rows(e.RowIndex).Cells("descripcion").Value.ToString()
-            codigotxt.Text = dgwcat.Rows(e.RowIndex).Cells("codigo").Value.ToString()
-            categoriatxt.Text = dgwcat.Rows(e.RowIndex).Cells("nombre").Value.ToString()
+            nombreinsumo.Text = dgwcat.Rows(e.RowIndex).Cells("codigo").Value.ToString()
+            stockacttxt.Text = dgwcat.Rows(e.RowIndex).Cells("nombre").Value.ToString()
         End If
 
     End Sub
 
     Private Sub labeltexto_Click(sender As Object, e As EventArgs) Handles labeltexto.Click
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles lblerrorinsumo.Click
+
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles lblerrorcategoria.Click
 
     End Sub
 End Class

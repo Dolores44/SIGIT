@@ -41,7 +41,8 @@ CREATE TABLE Usuario (
 CREATE TABLE Categoria (
   ID_categoria  INT AUTO_INCREMENT PRIMARY KEY,
   nombre        VARCHAR(50) NOT NULL,
-  descripcion   VARCHAR(255)
+  descripcion   VARCHAR(255),
+  codigo        VARCHAR(20)
 );
 
 CREATE TABLE Producto (
@@ -49,6 +50,7 @@ CREATE TABLE Producto (
   ID_categoria    INT NOT NULL,
   nombre          VARCHAR(100) NOT NULL,
   descripcion     VARCHAR(255),
+  imagen          VARCHAR(255),
   tipo_producto   VARCHAR(50), -- confeccionado / reventa
   CONSTRAINT fk_producto_categoria FOREIGN KEY (ID_categoria) REFERENCES Categoria(ID_categoria)
 );
@@ -59,6 +61,7 @@ CREATE TABLE Producto_Variante (
   color                 VARCHAR(50),
   talle                 VARCHAR(20),
   otra_caracteristica   VARCHAR(100),
+  imagen                VARCHAR(255),
   precio_venta          DECIMAL(10,2) NOT NULL,
   stock_actual          INT NOT NULL DEFAULT 0,
   stock_minimo          INT NOT NULL DEFAULT 0,
@@ -80,6 +83,7 @@ CREATE TABLE Insumo (
   stock_actual    DECIMAL(10,2) NOT NULL DEFAULT 0,
   stock_minimo    DECIMAL(10,2) NOT NULL DEFAULT 0,
   costo_unitario  DECIMAL(10,2),
+  nombre VARCHAR(100) NULL,
   CONSTRAINT fk_insumo_categoria FOREIGN KEY (ID_categoria) REFERENCES Categoria(ID_categoria)
 );
 
@@ -159,11 +163,13 @@ CREATE TABLE Venta (
 CREATE TABLE Detalle_Venta (
   ID_detalle_venta  INT AUTO_INCREMENT PRIMARY KEY,
   ID_venta          INT NOT NULL,
-  ID_variante       INT NOT NULL,
+  ID_variante       INT NULL,
+  ID_insumo         INT NULL,
   cantidad          INT NOT NULL,
   precio_unitario   DECIMAL(10,2) NOT NULL,
   CONSTRAINT fk_detventa_venta FOREIGN KEY (ID_venta) REFERENCES Venta(ID_venta),
-  CONSTRAINT fk_detventa_variante FOREIGN KEY (ID_variante) REFERENCES Producto_Variante(ID_variante)
+  CONSTRAINT fk_detventa_variante FOREIGN KEY (ID_variante) REFERENCES Producto_Variante(ID_variante),
+  CONSTRAINT fk_detventa_insumo FOREIGN KEY (ID_insumo) REFERENCES insumo(ID_insumo)
 );
 
 -- -!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-! 

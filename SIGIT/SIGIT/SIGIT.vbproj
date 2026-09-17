@@ -31,6 +31,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Subforms\UCinsumosañadir.vb" />
     <Compile Update="UserControl\UCinsumos.vb" />
     <Compile Update="UserControl\UCproduccion.vb" />
     <Compile Update="UserControl\UCclientes.vb" />
