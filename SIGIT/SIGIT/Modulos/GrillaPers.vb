@@ -39,4 +39,43 @@
 
 
     End Sub
+    'aca me quede 4 am
+    'Llamar despues de grillaperso
+    'Esto pone los colores de los estados de los insumos, que es lo que se ve en la grilla de insumos, y en la grilla de pedidos, que es lo mismo ahre, me autocompleto la IA eso, nakeve
+    Sub ColorearEstado(dvg As DataGridView)
+
+        For Each fila As DataGridViewRow In dvg.Rows 'Un for each para recorrer todas las filas de la grilla, y cambiar el color de la fila según el estado del insumo
+
+            If Not fila.IsNewRow Then 'Esto evita que el programa se rompa
+                Dim cellValue As Object = fila.Cells("estado").Value
+                ' Validamos que no esté vacío ni sea nulo
+                If cellValue IsNot Nothing AndAlso Not IsDBNull(cellValue) Then
+                    Dim estado As String = cellValue.ToString().ToUpper().Trim()
+                    Dim backColor As Color = Color.White
+                    Dim foreColor As Color = Color.Black
+                    ' Determinamos los colores según el estado
+                    Select Case estado
+                        Case "CRITICO"
+                            backColor = Color.FromArgb(248, 215, 218) ' Rojo claro
+                            foreColor = Color.FromArgb(132, 32, 41)   ' Rojo fuerte
+                        Case "BAJO"
+                            backColor = Color.FromArgb(255, 243, 205) ' Amarillo claro
+                            foreColor = Color.FromArgb(133, 100, 4)    ' Amarillo oscuro
+                        Case "DISPONIBLE"
+                            backColor = Color.FromArgb(212, 237, 218) ' Verde claro
+                            foreColor = Color.FromArgb(21, 87, 36)    ' Verde oscuro
+                    End Select
+                    ' APLICAR A TODA LA FILA: Cambiamos el estilo por defecto de la fila
+                    fila.DefaultCellStyle.BackColor = backColor
+                    fila.DefaultCellStyle.ForeColor = foreColor
+                End If
+
+
+            End If
+
+        Next
+
+    End Sub
+
+
 End Module

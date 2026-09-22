@@ -59,7 +59,7 @@
   - [ ] Paginacion con LIMIT/OFFSET
   - [ ] Alta/edicion de producto y variante
 - [ ] Stock (UCstock)
-- [ ] Insumos (UCinsumos)
+- [X] Insumos (UCinsumos)
 - [ ] Produccion (UCproduccion)
   - [ ] Tandas de produccion
   - [ ] Seguimiento por proceso (kanban interno)

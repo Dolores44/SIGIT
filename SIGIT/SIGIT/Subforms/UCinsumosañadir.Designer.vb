@@ -24,11 +24,17 @@ Partial Class UCinsumosañadir
     Private Sub InitializeComponent()
         labeltexto = New Label()
         Panel1 = New Panel()
+        categoriabox = New ComboBox()
+        lblerrorcu = New Label()
+        lblerrorunidadm = New Label()
+        lblerrorcategoria = New Label()
+        lblerrorsma = New Label()
+        lblerrorsta = New Label()
+        lblerrorinsumo = New Label()
         PictureBox1 = New PictureBox()
         unidadcombobox = New ComboBox()
         costoUnitxt = New TextBox()
         Stockmintxt = New TextBox()
-        TextBox3 = New TextBox()
         nombreinsumo = New TextBox()
         Label7 = New Label()
         Label6 = New Label()
@@ -48,12 +54,6 @@ Partial Class UCinsumosañadir
         Panel2 = New Panel()
         FLPproductos = New FlowLayoutPanel()
         dgwcat = New DataGridView()
-        lblerrorinsumo = New Label()
-        lblerrorsta = New Label()
-        lblerrorsma = New Label()
-        lblerrorcategoria = New Label()
-        lblerrorunidadm = New Label()
-        lblerrorcu = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -78,6 +78,7 @@ Partial Class UCinsumosañadir
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(categoriabox)
         Panel1.Controls.Add(lblerrorcu)
         Panel1.Controls.Add(lblerrorunidadm)
         Panel1.Controls.Add(lblerrorcategoria)
@@ -88,7 +89,6 @@ Partial Class UCinsumosañadir
         Panel1.Controls.Add(unidadcombobox)
         Panel1.Controls.Add(costoUnitxt)
         Panel1.Controls.Add(Stockmintxt)
-        Panel1.Controls.Add(TextBox3)
         Panel1.Controls.Add(nombreinsumo)
         Panel1.Controls.Add(Label7)
         Panel1.Controls.Add(Label6)
@@ -111,18 +111,80 @@ Partial Class UCinsumosañadir
         Panel1.Size = New Size(1208, 289)
         Panel1.TabIndex = 2
         ' 
+        ' categoriabox
+        ' 
+        categoriabox.FormattingEnabled = True
+        categoriabox.Location = New Point(301, 39)
+        categoriabox.Name = "categoriabox"
+        categoriabox.Size = New Size(111, 23)
+        categoriabox.TabIndex = 37
+        ' 
+        ' lblerrorcu
+        ' 
+        lblerrorcu.Font = New Font("Mongolian Baiti", 8F)
+        lblerrorcu.ForeColor = Color.Gray
+        lblerrorcu.Location = New Point(678, 111)
+        lblerrorcu.Name = "lblerrorcu"
+        lblerrorcu.Size = New Size(83, 16)
+        lblerrorcu.TabIndex = 36
+        ' 
+        ' lblerrorunidadm
+        ' 
+        lblerrorunidadm.Font = New Font("Mongolian Baiti", 8F)
+        lblerrorunidadm.ForeColor = Color.Gray
+        lblerrorunidadm.Location = New Point(678, 46)
+        lblerrorunidadm.Name = "lblerrorunidadm"
+        lblerrorunidadm.Size = New Size(83, 16)
+        lblerrorunidadm.TabIndex = 35
+        ' 
+        ' lblerrorcategoria
+        ' 
+        lblerrorcategoria.Font = New Font("Mongolian Baiti", 8F)
+        lblerrorcategoria.ForeColor = Color.Gray
+        lblerrorcategoria.Location = New Point(440, 46)
+        lblerrorcategoria.Name = "lblerrorcategoria"
+        lblerrorcategoria.Size = New Size(83, 16)
+        lblerrorcategoria.TabIndex = 34
+        ' 
+        ' lblerrorsma
+        ' 
+        lblerrorsma.Font = New Font("Mongolian Baiti", 8F)
+        lblerrorsma.ForeColor = Color.Gray
+        lblerrorsma.Location = New Point(440, 109)
+        lblerrorsma.Name = "lblerrorsma"
+        lblerrorsma.Size = New Size(83, 16)
+        lblerrorsma.TabIndex = 33
+        ' 
+        ' lblerrorsta
+        ' 
+        lblerrorsta.Font = New Font("Mongolian Baiti", 8F)
+        lblerrorsta.ForeColor = Color.Gray
+        lblerrorsta.Location = New Point(153, 109)
+        lblerrorsta.Name = "lblerrorsta"
+        lblerrorsta.Size = New Size(83, 16)
+        lblerrorsta.TabIndex = 32
+        ' 
+        ' lblerrorinsumo
+        ' 
+        lblerrorinsumo.Font = New Font("Mongolian Baiti", 8F)
+        lblerrorinsumo.ForeColor = Color.Gray
+        lblerrorinsumo.Location = New Point(153, 46)
+        lblerrorinsumo.Name = "lblerrorinsumo"
+        lblerrorinsumo.Size = New Size(83, 16)
+        lblerrorinsumo.TabIndex = 31
+        ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(831, 23)
+        PictureBox1.Location = New Point(872, 23)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(333, 175)
+        PictureBox1.Size = New Size(258, 175)
         PictureBox1.TabIndex = 30
         PictureBox1.TabStop = False
         ' 
         ' unidadcombobox
         ' 
         unidadcombobox.FormattingEnabled = True
-        unidadcombobox.Location = New Point(561, 42)
+        unidadcombobox.Location = New Point(567, 42)
         unidadcombobox.Name = "unidadcombobox"
         unidadcombobox.Size = New Size(111, 23)
         unidadcombobox.TabIndex = 29
@@ -142,14 +204,6 @@ Partial Class UCinsumosañadir
         Stockmintxt.PlaceholderText = "Stock Min"
         Stockmintxt.Size = New Size(133, 23)
         Stockmintxt.TabIndex = 27
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.Location = New Point(301, 42)
-        TextBox3.Name = "TextBox3"
-        TextBox3.PlaceholderText = "Nombre de la categoría"
-        TextBox3.Size = New Size(133, 23)
-        TextBox3.TabIndex = 26
         ' 
         ' nombreinsumo
         ' 
@@ -367,60 +421,6 @@ Partial Class UCinsumosañadir
         dgwcat.Size = New Size(1086, 330)
         dgwcat.TabIndex = 1
         ' 
-        ' lblerrorinsumo
-        ' 
-        lblerrorinsumo.Font = New Font("Mongolian Baiti", 8F)
-        lblerrorinsumo.ForeColor = Color.Gray
-        lblerrorinsumo.Location = New Point(153, 46)
-        lblerrorinsumo.Name = "lblerrorinsumo"
-        lblerrorinsumo.Size = New Size(83, 16)
-        lblerrorinsumo.TabIndex = 31
-        ' 
-        ' lblerrorsta
-        ' 
-        lblerrorsta.Font = New Font("Mongolian Baiti", 8F)
-        lblerrorsta.ForeColor = Color.Gray
-        lblerrorsta.Location = New Point(153, 109)
-        lblerrorsta.Name = "lblerrorsta"
-        lblerrorsta.Size = New Size(83, 16)
-        lblerrorsta.TabIndex = 32
-        ' 
-        ' lblerrorsma
-        ' 
-        lblerrorsma.Font = New Font("Mongolian Baiti", 8F)
-        lblerrorsma.ForeColor = Color.Gray
-        lblerrorsma.Location = New Point(440, 109)
-        lblerrorsma.Name = "lblerrorsma"
-        lblerrorsma.Size = New Size(83, 16)
-        lblerrorsma.TabIndex = 33
-        ' 
-        ' lblerrorcategoria
-        ' 
-        lblerrorcategoria.Font = New Font("Mongolian Baiti", 8F)
-        lblerrorcategoria.ForeColor = Color.Gray
-        lblerrorcategoria.Location = New Point(440, 46)
-        lblerrorcategoria.Name = "lblerrorcategoria"
-        lblerrorcategoria.Size = New Size(83, 16)
-        lblerrorcategoria.TabIndex = 34
-        ' 
-        ' lblerrorunidadm
-        ' 
-        lblerrorunidadm.Font = New Font("Mongolian Baiti", 8F)
-        lblerrorunidadm.ForeColor = Color.Gray
-        lblerrorunidadm.Location = New Point(678, 46)
-        lblerrorunidadm.Name = "lblerrorunidadm"
-        lblerrorunidadm.Size = New Size(83, 16)
-        lblerrorunidadm.TabIndex = 35
-        ' 
-        ' lblerrorcu
-        ' 
-        lblerrorcu.Font = New Font("Mongolian Baiti", 8F)
-        lblerrorcu.ForeColor = Color.Gray
-        lblerrorcu.Location = New Point(678, 111)
-        lblerrorcu.Name = "lblerrorcu"
-        lblerrorcu.Size = New Size(83, 16)
-        lblerrorcu.TabIndex = 36
-        ' 
         ' UCinsumosañadir
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -458,7 +458,6 @@ Partial Class UCinsumosañadir
     Friend WithEvents lblerrorcat As Label
     Friend WithEvents errorcodigo As Label
     Friend WithEvents dgwcat As DataGridView
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents nombreinsumo As TextBox
     Friend WithEvents Label7 As Label
@@ -475,5 +474,6 @@ Partial Class UCinsumosañadir
     Friend WithEvents lblerrorsma As Label
     Friend WithEvents lblerrorsta As Label
     Friend WithEvents lblerrorinsumo As Label
+    Friend WithEvents categoriabox As ComboBox
 
 End Class

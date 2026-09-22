@@ -24,38 +24,47 @@ Partial Class UCinsumos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        categorialbl = New Label()
         registrarmovi = New Button()
-        Label1 = New Label()
         insumostotaleslbl = New Label()
         label4 = New Label()
-        descripciontxt = New TextBox()
-        comboestado = New ComboBox()
-        Añadirbtn = New Button()
-        eliminarbtn = New Button()
+        combocategoria = New ComboBox()
         Label2 = New Label()
         dashboardbtn = New Button()
-        stocklbl = New Label()
         buscartxt = New TextBox()
         buscarlbl = New Label()
+        Label1 = New Label()
+        descripciontxt = New TextBox()
+        stocklbl = New Label()
+        PictureBox1 = New PictureBox()
         labeltexto = New Label()
         dgwinsumos = New DataGridView()
+        Panel2 = New Panel()
+        nombreinsumolbl = New Label()
+        stockvalorizadolbl = New Label()
+        stockminlbl = New Label()
+        stockactuallbl = New Label()
+        Label5 = New Label()
+        Label3 = New Label()
+        Panel4 = New Panel()
+        dgvrecientes = New DataGridView()
         Panel1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgwinsumos, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        Panel4.SuspendLayout()
+        CType(dgvrecientes, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(categorialbl)
         Panel1.Controls.Add(registrarmovi)
-        Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(insumostotaleslbl)
         Panel1.Controls.Add(label4)
-        Panel1.Controls.Add(descripciontxt)
-        Panel1.Controls.Add(comboestado)
-        Panel1.Controls.Add(Añadirbtn)
-        Panel1.Controls.Add(eliminarbtn)
+        Panel1.Controls.Add(combocategoria)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(dashboardbtn)
-        Panel1.Controls.Add(stocklbl)
         Panel1.Controls.Add(buscartxt)
         Panel1.Controls.Add(buscarlbl)
         Panel1.Dock = DockStyle.Top
@@ -63,6 +72,16 @@ Partial Class UCinsumos
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1224, 109)
         Panel1.TabIndex = 4
+        ' 
+        ' categorialbl
+        ' 
+        categorialbl.AutoSize = True
+        categorialbl.Font = New Font("Mongolian Baiti", 11F)
+        categorialbl.Location = New Point(211, 53)
+        categorialbl.Name = "categorialbl"
+        categorialbl.Size = New Size(71, 16)
+        categorialbl.TabIndex = 17
+        categorialbl.Text = "Categoría:"
         ' 
         ' registrarmovi
         ' 
@@ -72,25 +91,15 @@ Partial Class UCinsumos
         registrarmovi.FlatStyle = FlatStyle.Flat
         registrarmovi.Font = New Font("Segoe UI", 10F)
         registrarmovi.ForeColor = Color.GhostWhite
-        registrarmovi.Image = My.Resources.Resources.eliminar
+        registrarmovi.Image = My.Resources.Resources.añadir
         registrarmovi.ImageAlign = ContentAlignment.TopLeft
-        registrarmovi.Location = New Point(979, 45)
+        registrarmovi.Location = New Point(829, 46)
         registrarmovi.Name = "registrarmovi"
-        registrarmovi.Size = New Size(88, 30)
+        registrarmovi.Size = New Size(114, 31)
         registrarmovi.TabIndex = 9
         registrarmovi.Text = "Registrar "
         registrarmovi.TextImageRelation = TextImageRelation.ImageBeforeText
         registrarmovi.UseVisualStyleBackColor = False
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Mongolian Baiti", 11F)
-        Label1.Location = New Point(320, 16)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(82, 16)
-        Label1.TabIndex = 5
-        Label1.Text = "Descripcion"
         ' 
         ' insumostotaleslbl
         ' 
@@ -98,7 +107,7 @@ Partial Class UCinsumos
         insumostotaleslbl.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
         insumostotaleslbl.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         insumostotaleslbl.ForeColor = Color.GhostWhite
-        insumostotaleslbl.Location = New Point(600, 57)
+        insumostotaleslbl.Location = New Point(741, 51)
         insumostotaleslbl.Name = "insumostotaleslbl"
         insumostotaleslbl.Size = New Size(17, 20)
         insumostotaleslbl.TabIndex = 16
@@ -108,69 +117,24 @@ Partial Class UCinsumos
         ' 
         label4.AutoSize = True
         label4.Font = New Font("Segoe UI", 12F, FontStyle.Underline)
-        label4.Location = New Point(555, 33)
+        label4.Location = New Point(603, 49)
         label4.Name = "label4"
         label4.Size = New Size(120, 21)
         label4.TabIndex = 15
         label4.Text = "Insumos Totales"
         ' 
-        ' descripciontxt
+        ' combocategoria
         ' 
-        descripciontxt.Location = New Point(225, 35)
-        descripciontxt.Multiline = True
-        descripciontxt.Name = "descripciontxt"
-        descripciontxt.PlaceholderText = "Descripción breve de la categoría"
-        descripciontxt.Size = New Size(290, 41)
-        descripciontxt.TabIndex = 14
-        ' 
-        ' comboestado
-        ' 
-        comboestado.FormattingEnabled = True
-        comboestado.Location = New Point(86, 57)
-        comboestado.Name = "comboestado"
-        comboestado.Size = New Size(121, 23)
-        comboestado.TabIndex = 10
-        ' 
-        ' Añadirbtn
-        ' 
-        Añadirbtn.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
-        Añadirbtn.FlatAppearance.BorderSize = 0
-        Añadirbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
-        Añadirbtn.FlatStyle = FlatStyle.Flat
-        Añadirbtn.Font = New Font("Segoe UI", 10F)
-        Añadirbtn.ForeColor = Color.GhostWhite
-        Añadirbtn.Image = My.Resources.Resources.añadir
-        Añadirbtn.ImageAlign = ContentAlignment.TopLeft
-        Añadirbtn.Location = New Point(862, 21)
-        Añadirbtn.Name = "Añadirbtn"
-        Añadirbtn.Size = New Size(83, 30)
-        Añadirbtn.TabIndex = 9
-        Añadirbtn.Text = "Añadir "
-        Añadirbtn.TextImageRelation = TextImageRelation.ImageBeforeText
-        Añadirbtn.UseVisualStyleBackColor = False
-        ' 
-        ' eliminarbtn
-        ' 
-        eliminarbtn.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
-        eliminarbtn.FlatAppearance.BorderSize = 0
-        eliminarbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
-        eliminarbtn.FlatStyle = FlatStyle.Flat
-        eliminarbtn.Font = New Font("Segoe UI", 10F)
-        eliminarbtn.ForeColor = Color.GhostWhite
-        eliminarbtn.Image = My.Resources.Resources.eliminar
-        eliminarbtn.ImageAlign = ContentAlignment.TopLeft
-        eliminarbtn.Location = New Point(862, 69)
-        eliminarbtn.Name = "eliminarbtn"
-        eliminarbtn.Size = New Size(83, 30)
-        eliminarbtn.TabIndex = 8
-        eliminarbtn.Text = "Eliminar"
-        eliminarbtn.TextImageRelation = TextImageRelation.ImageBeforeText
-        eliminarbtn.UseVisualStyleBackColor = False
+        combocategoria.FormattingEnabled = True
+        combocategoria.Location = New Point(288, 51)
+        combocategoria.Name = "combocategoria"
+        combocategoria.Size = New Size(121, 23)
+        combocategoria.TabIndex = 10
         ' 
         ' Label2
         ' 
         Label2.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
-        Label2.Location = New Point(829, 18)
+        Label2.Location = New Point(803, 18)
         Label2.Name = "Label2"
         Label2.Size = New Size(5, 77)
         Label2.TabIndex = 0
@@ -183,27 +147,17 @@ Partial Class UCinsumos
         dashboardbtn.FlatStyle = FlatStyle.Flat
         dashboardbtn.Font = New Font("Segoe UI", 10F)
         dashboardbtn.ForeColor = Color.Black
-        dashboardbtn.Location = New Point(695, 35)
+        dashboardbtn.Location = New Point(426, 45)
         dashboardbtn.Name = "dashboardbtn"
-        dashboardbtn.Size = New Size(100, 33)
+        dashboardbtn.Size = New Size(114, 31)
         dashboardbtn.TabIndex = 1
         dashboardbtn.Text = "Buscar"
         dashboardbtn.TextImageRelation = TextImageRelation.ImageBeforeText
         dashboardbtn.UseVisualStyleBackColor = False
         ' 
-        ' stocklbl
-        ' 
-        stocklbl.AutoSize = True
-        stocklbl.Font = New Font("Mongolian Baiti", 11F)
-        stocklbl.Location = New Point(16, 59)
-        stocklbl.Name = "stocklbl"
-        stocklbl.Size = New Size(46, 16)
-        stocklbl.TabIndex = 3
-        stocklbl.Text = "Stock:"
-        ' 
         ' buscartxt
         ' 
-        buscartxt.Location = New Point(86, 21)
+        buscartxt.Location = New Point(73, 48)
         buscartxt.Name = "buscartxt"
         buscartxt.Size = New Size(121, 23)
         buscartxt.TabIndex = 11
@@ -212,11 +166,48 @@ Partial Class UCinsumos
         ' 
         buscarlbl.AutoSize = True
         buscarlbl.Font = New Font("Mongolian Baiti", 11F)
-        buscarlbl.Location = New Point(16, 27)
+        buscarlbl.Location = New Point(3, 55)
         buscarlbl.Name = "buscarlbl"
         buscarlbl.Size = New Size(54, 16)
         buscarlbl.TabIndex = 1
         buscarlbl.Text = "Buscar:"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Mongolian Baiti", 11F)
+        Label1.Location = New Point(128, 223)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(82, 16)
+        Label1.TabIndex = 5
+        Label1.Text = "Descripcion"
+        ' 
+        ' descripciontxt
+        ' 
+        descripciontxt.Location = New Point(15, 242)
+        descripciontxt.Multiline = True
+        descripciontxt.Name = "descripciontxt"
+        descripciontxt.PlaceholderText = "Descripción de insumo"
+        descripciontxt.Size = New Size(305, 49)
+        descripciontxt.TabIndex = 14
+        ' 
+        ' stocklbl
+        ' 
+        stocklbl.AutoSize = True
+        stocklbl.Font = New Font("Mongolian Baiti", 11F)
+        stocklbl.Location = New Point(38, 308)
+        stocklbl.Name = "stocklbl"
+        stocklbl.Size = New Size(46, 16)
+        stocklbl.TabIndex = 3
+        stocklbl.Text = "Stock:"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(15, 34)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(305, 184)
+        PictureBox1.TabIndex = 17
+        PictureBox1.TabStop = False
         ' 
         ' labeltexto
         ' 
@@ -230,25 +221,132 @@ Partial Class UCinsumos
         labeltexto.RightToLeft = RightToLeft.No
         labeltexto.Size = New Size(1224, 38)
         labeltexto.TabIndex = 2
-        labeltexto.Text = "         GESTIÓN DE PEDIDOS Y FACTURACIÓN"
+        labeltexto.Text = "         GESTIÓN DE INSUMOS"
         labeltexto.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' dgwinsumos
         ' 
         dgwinsumos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgwinsumos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgwinsumos.Location = New Point(17, 150)
+        dgwinsumos.Location = New Point(75, 181)
         dgwinsumos.MultiSelect = False
         dgwinsumos.Name = "dgwinsumos"
         dgwinsumos.ReadOnly = True
         dgwinsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgwinsumos.Size = New Size(1163, 432)
+        dgwinsumos.Size = New Size(720, 360)
         dgwinsumos.TabIndex = 3
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.White
+        Panel2.Controls.Add(nombreinsumolbl)
+        Panel2.Controls.Add(stockvalorizadolbl)
+        Panel2.Controls.Add(stockminlbl)
+        Panel2.Controls.Add(stockactuallbl)
+        Panel2.Controls.Add(Label5)
+        Panel2.Controls.Add(Label3)
+        Panel2.Controls.Add(PictureBox1)
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(descripciontxt)
+        Panel2.Controls.Add(stocklbl)
+        Panel2.Location = New Point(829, 181)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(337, 360)
+        Panel2.TabIndex = 18
+        ' 
+        ' nombreinsumolbl
+        ' 
+        nombreinsumolbl.AutoSize = True
+        nombreinsumolbl.Font = New Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        nombreinsumolbl.Location = New Point(105, 15)
+        nombreinsumolbl.Name = "nombreinsumolbl"
+        nombreinsumolbl.Size = New Size(149, 16)
+        nombreinsumolbl.TabIndex = 23
+        nombreinsumolbl.Text = "Nombre del insumo"
+        ' 
+        ' stockvalorizadolbl
+        ' 
+        stockvalorizadolbl.AutoSize = True
+        stockvalorizadolbl.BackColor = Color.White
+        stockvalorizadolbl.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
+        stockvalorizadolbl.ForeColor = Color.Black
+        stockvalorizadolbl.Location = New Point(249, 334)
+        stockvalorizadolbl.Name = "stockvalorizadolbl"
+        stockvalorizadolbl.Size = New Size(15, 17)
+        stockvalorizadolbl.TabIndex = 22
+        stockvalorizadolbl.Text = "0"
+        ' 
+        ' stockminlbl
+        ' 
+        stockminlbl.AutoSize = True
+        stockminlbl.BackColor = Color.White
+        stockminlbl.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
+        stockminlbl.ForeColor = Color.Black
+        stockminlbl.Location = New Point(145, 334)
+        stockminlbl.Name = "stockminlbl"
+        stockminlbl.Size = New Size(15, 17)
+        stockminlbl.TabIndex = 21
+        stockminlbl.Text = "0"
+        ' 
+        ' stockactuallbl
+        ' 
+        stockactuallbl.AutoSize = True
+        stockactuallbl.BackColor = Color.White
+        stockactuallbl.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
+        stockactuallbl.ForeColor = Color.Black
+        stockactuallbl.Location = New Point(40, 334)
+        stockactuallbl.Name = "stockactuallbl"
+        stockactuallbl.Size = New Size(15, 17)
+        stockactuallbl.TabIndex = 20
+        stockactuallbl.Text = "0"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Mongolian Baiti", 11F)
+        Label5.Location = New Point(228, 308)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(80, 16)
+        Label5.TabIndex = 19
+        Label5.Text = "Stock Val. :"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Mongolian Baiti", 11F)
+        Label3.Location = New Point(128, 308)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(71, 16)
+        Label3.TabIndex = 18
+        Label3.Text = "StockMin:"
+        ' 
+        ' Panel4
+        ' 
+        Panel4.Controls.Add(dgvrecientes)
+        Panel4.Location = New Point(73, 563)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(1093, 124)
+        Panel4.TabIndex = 19
+        ' 
+        ' dgvrecientes
+        ' 
+        dgvrecientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvrecientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvrecientes.Dock = DockStyle.Fill
+        dgvrecientes.Location = New Point(0, 0)
+        dgvrecientes.MultiSelect = False
+        dgvrecientes.Name = "dgvrecientes"
+        dgvrecientes.ReadOnly = True
+        dgvrecientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvrecientes.Size = New Size(1093, 124)
+        dgvrecientes.TabIndex = 4
         ' 
         ' UCinsumos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(Panel4)
+        Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(labeltexto)
         Controls.Add(dgwinsumos)
@@ -256,14 +354,17 @@ Partial Class UCinsumos
         Size = New Size(1224, 713)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(dgwinsumos, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel4.ResumeLayout(False)
+        CType(dgvrecientes, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents comboestado As ComboBox
-    Friend WithEvents Añadirbtn As Button
-    Friend WithEvents eliminarbtn As Button
+    Friend WithEvents combocategoria As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents dashboardbtn As Button
     Friend WithEvents dtphasta As DateTimePicker
@@ -278,5 +379,16 @@ Partial Class UCinsumos
     Friend WithEvents label4 As Label
     Friend WithEvents descripciontxt As TextBox
     Friend WithEvents registrarmovi As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents dgvrecientes As DataGridView
+    Friend WithEvents categorialbl As Label
+    Friend WithEvents stockvalorizadolbl As Label
+    Friend WithEvents stockminlbl As Label
+    Friend WithEvents stockactuallbl As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents nombreinsumolbl As Label
 
 End Class
