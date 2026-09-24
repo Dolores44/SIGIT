@@ -1,0 +1,573 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class UCproductovariante
+    Inherits System.Windows.Forms.Form
+
+    'UserControl reemplaza a Dispose para limpiar la lista de componentes.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Requerido por el Diseñador de Windows Forms
+    Private components As System.ComponentModel.IContainer
+
+    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+    'Se puede modificar usando el Diseñador de Windows Forms.  
+    'No lo modifique con el editor de código.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        labeltexto = New Label()
+        Panel1 = New Panel()
+        Label14 = New Label()
+        Label15 = New Label()
+        Label16 = New Label()
+        Label17 = New Label()
+        Label18 = New Label()
+        Label10 = New Label()
+        Label11 = New Label()
+        Label12 = New Label()
+        Label13 = New Label()
+        Label9 = New Label()
+        PictureBox1 = New PictureBox()
+        Label8 = New Label()
+        Label6 = New Label()
+        TextBox2 = New TextBox()
+        Label7 = New Label()
+        TextBox3 = New TextBox()
+        Label5 = New Label()
+        Label4 = New Label()
+        TextBox1 = New TextBox()
+        Label2 = New Label()
+        combocategoria = New ComboBox()
+        Label3 = New Label()
+        Label1 = New Label()
+        Volver = New Button()
+        carectxt = New TextBox()
+        colortxt = New TextBox()
+        eliminarbtn = New Button()
+        categoriatxt = New TextBox()
+        buscarlbl = New Label()
+        Panel2 = New Panel()
+        añdinsumopr = New Button()
+        dgwinsumos = New DataGridView()
+        Label21 = New Label()
+        ComboBox1 = New ComboBox()
+        TextBox4 = New TextBox()
+        Label20 = New Label()
+        Label19 = New Label()
+        Panel1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        CType(dgwinsumos, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' labeltexto
+        ' 
+        labeltexto.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
+        labeltexto.Dock = DockStyle.Top
+        labeltexto.Font = New Font("Segoe UI Semibold", 14.0F, FontStyle.Bold)
+        labeltexto.ForeColor = Color.GhostWhite
+        labeltexto.ImageAlign = ContentAlignment.MiddleRight
+        labeltexto.Location = New Point(0, 0)
+        labeltexto.Name = "labeltexto"
+        labeltexto.RightToLeft = RightToLeft.No
+        labeltexto.Size = New Size(1201, 38)
+        labeltexto.TabIndex = 1
+        labeltexto.Text = "     SECCIÒN AÑADIR UN PRODUCTO"
+        labeltexto.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Panel1
+        ' 
+        Panel1.Controls.Add(Label14)
+        Panel1.Controls.Add(Label15)
+        Panel1.Controls.Add(Label16)
+        Panel1.Controls.Add(Label17)
+        Panel1.Controls.Add(Label18)
+        Panel1.Controls.Add(Label10)
+        Panel1.Controls.Add(Label11)
+        Panel1.Controls.Add(Label12)
+        Panel1.Controls.Add(Label13)
+        Panel1.Controls.Add(Label9)
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(Label8)
+        Panel1.Controls.Add(Label6)
+        Panel1.Controls.Add(TextBox2)
+        Panel1.Controls.Add(Label7)
+        Panel1.Controls.Add(TextBox3)
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(combocategoria)
+        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(Volver)
+        Panel1.Controls.Add(carectxt)
+        Panel1.Controls.Add(colortxt)
+        Panel1.Controls.Add(eliminarbtn)
+        Panel1.Controls.Add(categoriatxt)
+        Panel1.Controls.Add(buscarlbl)
+        Panel1.Dock = DockStyle.Left
+        Panel1.Location = New Point(0, 38)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(487, 715)
+        Panel1.TabIndex = 3
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Mongolian Baiti", 11.0F)
+        Label14.Location = New Point(367, 502)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(12, 16)
+        Label14.TabIndex = 39
+        Label14.Text = "-"
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Mongolian Baiti", 11.0F)
+        Label15.Location = New Point(367, 620)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(12, 16)
+        Label15.TabIndex = 38
+        Label15.Text = "-"
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Font = New Font("Mongolian Baiti", 11.0F)
+        Label16.Location = New Point(367, 561)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(12, 16)
+        Label16.TabIndex = 37
+        Label16.Text = "-"
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Font = New Font("Mongolian Baiti", 11.0F)
+        Label17.Location = New Point(367, 443)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(12, 16)
+        Label17.TabIndex = 36
+        Label17.Text = "-"
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Font = New Font("Mongolian Baiti", 11.0F)
+        Label18.Location = New Point(367, 384)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(12, 16)
+        Label18.TabIndex = 35
+        Label18.Text = "-"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Mongolian Baiti", 12.0F)
+        Label10.Location = New Point(241, 502)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(84, 16)
+        Label10.TabIndex = 34
+        Label10.Text = "Stock actual"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Mongolian Baiti", 12.0F)
+        Label11.Location = New Point(241, 620)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(43, 16)
+        Label11.TabIndex = 33
+        Label11.Text = "Color"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Mongolian Baiti", 12.0F)
+        Label12.Location = New Point(241, 561)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(104, 16)
+        Label12.TabIndex = 32
+        Label12.Text = "Precio de venta"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Mongolian Baiti", 12.0F)
+        Label13.Location = New Point(241, 443)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(43, 16)
+        Label13.TabIndex = 31
+        Label13.Text = "Color"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Mongolian Baiti", 12.0F)
+        Label9.Location = New Point(241, 384)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(64, 16)
+        Label9.TabIndex = 30
+        Label9.Text = "Producto"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(20, 372)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(215, 266)
+        PictureBox1.TabIndex = 29
+        PictureBox1.TabStop = False
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Mongolian Baiti", 13.0F)
+        Label8.Location = New Point(166, 345)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(154, 19)
+        Label8.TabIndex = 28
+        Label8.Text = "Vista previa de lista"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Mongolian Baiti", 11.0F)
+        Label6.Location = New Point(326, 197)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(83, 16)
+        Label6.TabIndex = 26
+        Label6.Text = "Stock actual"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.Lavender
+        TextBox2.Location = New Point(326, 216)
+        TextBox2.Name = "TextBox2"
+        TextBox2.PlaceholderText = "N. stock actual"
+        TextBox2.Size = New Size(142, 23)
+        TextBox2.TabIndex = 25
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Mongolian Baiti", 11.0F)
+        Label7.Location = New Point(20, 197)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(95, 16)
+        Label7.TabIndex = 24
+        Label7.Text = "Stock Minimo"
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.BackColor = Color.Lavender
+        TextBox3.Location = New Point(20, 216)
+        TextBox3.Name = "TextBox3"
+        TextBox3.PlaceholderText = "N. stockminimo"
+        TextBox3.Size = New Size(192, 23)
+        TextBox3.TabIndex = 23
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Mongolian Baiti", 11.0F)
+        Label5.Location = New Point(20, 253)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(97, 16)
+        Label5.TabIndex = 22
+        Label5.Text = "Caracteristicas"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Mongolian Baiti", 11.0F)
+        Label4.Location = New Point(326, 126)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(103, 16)
+        Label4.TabIndex = 21
+        Label4.Text = "Precio de venta"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.BackColor = Color.Lavender
+        TextBox1.Location = New Point(326, 145)
+        TextBox1.Name = "TextBox1"
+        TextBox1.PlaceholderText = "Numeros"
+        TextBox1.Size = New Size(142, 23)
+        TextBox1.TabIndex = 20
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Mongolian Baiti", 11.0F)
+        Label2.Location = New Point(20, 126)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(42, 16)
+        Label2.TabIndex = 19
+        Label2.Text = "Color"
+        ' 
+        ' combocategoria
+        ' 
+        combocategoria.BackColor = Color.Lavender
+        combocategoria.FormattingEnabled = True
+        combocategoria.Location = New Point(326, 74)
+        combocategoria.Name = "combocategoria"
+        combocategoria.Size = New Size(142, 23)
+        combocategoria.TabIndex = 18
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Mongolian Baiti", 11.0F)
+        Label3.Location = New Point(20, 55)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(63, 16)
+        Label3.TabIndex = 17
+        Label3.Text = "Producto"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Mongolian Baiti", 11.0F)
+        Label1.Location = New Point(326, 55)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(63, 16)
+        Label1.TabIndex = 16
+        Label1.Text = "Producto"
+        ' 
+        ' Volver
+        ' 
+        Volver.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
+        Volver.FlatAppearance.BorderSize = 0
+        Volver.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        Volver.FlatStyle = FlatStyle.Flat
+        Volver.Font = New Font("Segoe UI", 10.0F)
+        Volver.ForeColor = Color.GhostWhite
+        Volver.Image = My.Resources.Resources.volver
+        Volver.ImageAlign = ContentAlignment.TopLeft
+        Volver.Location = New Point(12, 660)
+        Volver.Name = "Volver"
+        Volver.Size = New Size(148, 28)
+        Volver.TabIndex = 15
+        Volver.Text = "Cancelar"
+        Volver.TextImageRelation = TextImageRelation.ImageBeforeText
+        Volver.UseVisualStyleBackColor = False
+        ' 
+        ' carectxt
+        ' 
+        carectxt.BackColor = Color.Lavender
+        carectxt.Location = New Point(20, 272)
+        carectxt.Multiline = True
+        carectxt.Name = "carectxt"
+        carectxt.PlaceholderText = "Caracteristica"
+        carectxt.Size = New Size(448, 54)
+        carectxt.TabIndex = 13
+        ' 
+        ' colortxt
+        ' 
+        colortxt.BackColor = Color.Lavender
+        colortxt.Location = New Point(20, 145)
+        colortxt.Name = "colortxt"
+        colortxt.PlaceholderText = "Color, cualquiera"
+        colortxt.Size = New Size(192, 23)
+        colortxt.TabIndex = 12
+        ' 
+        ' eliminarbtn
+        ' 
+        eliminarbtn.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
+        eliminarbtn.FlatAppearance.BorderSize = 0
+        eliminarbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        eliminarbtn.FlatStyle = FlatStyle.Flat
+        eliminarbtn.Font = New Font("Segoe UI", 10.0F)
+        eliminarbtn.ForeColor = Color.GhostWhite
+        eliminarbtn.Image = My.Resources.Resources.añadir
+        eliminarbtn.ImageAlign = ContentAlignment.TopLeft
+        eliminarbtn.Location = New Point(320, 660)
+        eliminarbtn.Name = "eliminarbtn"
+        eliminarbtn.Size = New Size(148, 28)
+        eliminarbtn.TabIndex = 11
+        eliminarbtn.Text = "Añadir producto variante"
+        eliminarbtn.TextImageRelation = TextImageRelation.ImageBeforeText
+        eliminarbtn.UseVisualStyleBackColor = False
+        ' 
+        ' categoriatxt
+        ' 
+        categoriatxt.BackColor = Color.Lavender
+        categoriatxt.Location = New Point(20, 74)
+        categoriatxt.Name = "categoriatxt"
+        categoriatxt.PlaceholderText = "Nombre de la categoría"
+        categoriatxt.Size = New Size(192, 23)
+        categoriatxt.TabIndex = 2
+        ' 
+        ' buscarlbl
+        ' 
+        buscarlbl.AutoSize = True
+        buscarlbl.Font = New Font("Mongolian Baiti", 15.0F)
+        buscarlbl.Location = New Point(20, 12)
+        buscarlbl.Name = "buscarlbl"
+        buscarlbl.Size = New Size(208, 21)
+        buscarlbl.TabIndex = 1
+        buscarlbl.Text = "Producto y sus variantes"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.Controls.Add(añdinsumopr)
+        Panel2.Controls.Add(dgwinsumos)
+        Panel2.Controls.Add(Label21)
+        Panel2.Controls.Add(ComboBox1)
+        Panel2.Controls.Add(TextBox4)
+        Panel2.Controls.Add(Label20)
+        Panel2.Controls.Add(Label19)
+        Panel2.Dock = DockStyle.Left
+        Panel2.Location = New Point(487, 38)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(718, 715)
+        Panel2.TabIndex = 4
+        ' 
+        ' añdinsumopr
+        ' 
+        añdinsumopr.BackColor = Color.Lavender
+        añdinsumopr.FlatAppearance.BorderSize = 0
+        añdinsumopr.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        añdinsumopr.FlatStyle = FlatStyle.Flat
+        añdinsumopr.Font = New Font("Segoe UI", 10.0F)
+        añdinsumopr.ForeColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
+        añdinsumopr.Image = My.Resources.Resources.añadir2
+        añdinsumopr.ImageAlign = ContentAlignment.TopLeft
+        añdinsumopr.Location = New Point(527, 69)
+        añdinsumopr.Name = "añdinsumopr"
+        añdinsumopr.Size = New Size(148, 28)
+        añdinsumopr.TabIndex = 40
+        añdinsumopr.Text = "Añadir insumo"
+        añdinsumopr.TextImageRelation = TextImageRelation.ImageBeforeText
+        añdinsumopr.UseVisualStyleBackColor = False
+        ' 
+        ' dgwinsumos
+        ' 
+        dgwinsumos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgwinsumos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgwinsumos.Location = New Point(48, 126)
+        dgwinsumos.MultiSelect = False
+        dgwinsumos.Name = "dgwinsumos"
+        dgwinsumos.ReadOnly = True
+        dgwinsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgwinsumos.Size = New Size(627, 306)
+        dgwinsumos.TabIndex = 42
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Font = New Font("Mongolian Baiti", 11.0F)
+        Label21.Location = New Point(375, 55)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(63, 16)
+        Label21.TabIndex = 41
+        Label21.Text = "Cantidad"
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.BackColor = Color.Lavender
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(48, 74)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(192, 23)
+        ComboBox1.TabIndex = 41
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.BackColor = Color.Lavender
+        TextBox4.Location = New Point(307, 74)
+        TextBox4.Name = "TextBox4"
+        TextBox4.PlaceholderText = "Cantidad de insumo"
+        TextBox4.Size = New Size(192, 23)
+        TextBox4.TabIndex = 40
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Mongolian Baiti", 11.0F)
+        Label20.Location = New Point(105, 55)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(63, 16)
+        Label20.TabIndex = 40
+        Label20.Text = "Producto"
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Font = New Font("Mongolian Baiti", 15.0F)
+        Label19.Location = New Point(296, 12)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(124, 21)
+        Label19.TabIndex = 40
+        Label19.Text = "Ficha Tecnica"
+        ' 
+        ' UCproductovariante
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.GhostWhite
+        ClientSize = New Size(1201, 753)
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
+        Controls.Add(labeltexto)
+        Name = "UCproductovariante"
+        Text = "Añadir categorias"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        CType(dgwinsumos, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+    End Sub
+
+    Friend WithEvents labeltexto As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Volver As Button
+    Friend WithEvents carectxt As TextBox
+    Friend WithEvents colortxt As TextBox
+    Friend WithEvents eliminarbtn As Button
+    Friend WithEvents categoriatxt As TextBox
+    Friend WithEvents buscarlbl As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents combocategoria As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label5 As Label
+    Private WithEvents Label6 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label8 As Label
+    Private WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label9 As Label
+    Private WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents añdinsumopr As Button
+    Friend WithEvents dgwinsumos As DataGridView
+
+End Class

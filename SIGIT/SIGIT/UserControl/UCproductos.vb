@@ -56,7 +56,15 @@ Public Class UCproductos
         ' abro el form de categorias
         Using nuevoform As New UCproductoscategoria()
             nuevoform.ShowDialog()
+            cargarproductos()
         End Using
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Using newform As New UCproductosañadir()
+            newform.ShowDialog()
+            cargarproductos()
+        End Using
     End Sub
 End Class

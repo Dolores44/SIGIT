@@ -11,6 +11,23 @@ Public Class UCinsumos
 
     End Sub
 
+    Private Sub cargarinsumosrecientes() 'cargo los insumos recientes, osea la lista d abajo
+        Try
+            Using cn As New MySqlConnection(CADENA)
+                cn.Open()
+                Dim sql As String = "SELECT ID_insumo AS ID, nombre, stock_actual AS `Stock Actual`, costo_unitario AS `Costo Unitario` FROM insumo ORDER BY ID_insumo DESC LIMIT 3;" 'Utilizo limit para mostrar los ultimos 3 insumos
+                Using cmd As New MySqlCommand(sql, cn)
+                    Dim tabla As New DataTable()
+                    Using lector = cmd.ExecuteReader()
+                        tabla.Load(lector)
+                    End Using
+                    dgvrecientes.DataSource = tabla
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar insumos recientes: " & ex.Message)
+        End Try
+    End Sub
 
     Private Sub cargarcombocategorias()
         Try
@@ -116,7 +133,36 @@ Public Class UCinsumos
 
 
     End Sub
+    Private Sub cambiarstock(stockactualizar As Integer) 'subrutina para cambiar stock
+        Try
+            Using cn As New MySqlConnection(CADENA)
+                cn.Open()
 
+                Dim sql As String = "UPDATE insumo " &
+                                    "SET stock_actual = stock_actual + @stockactualizar " & 'el valor que luego sacaremos del textbox, ya que no se modifica directamente si no que con botones, se realiza la operacion
+                                    "WHERE ID_insumo = @idinsumo " & 'Valor que sacamos de la tabla seleccionada
+                                    "AND stock_actual + @stockactualizar >= 0;" 'Esto es para que no se pueda poner un stock negativo, si el stock actual es 5 y el usuario quiere restar 10, no se puede, entonces no se hace la operacion"
+                Using cmd As New MySqlCommand(sql, cn)
+                    cmd.Parameters.AddWithValue("@stockactualizar", stockactualizar)
+
+                    Dim id As Integer = CInt(dgwinsumos.SelectedRows(0).Cells("ID").Value) 'Obtengo el ID del insumo seleccionado en la grilla)
+
+                    cmd.Parameters.AddWithValue("@idinsumo", id)
+
+                    Dim resultado As Integer = cmd.ExecuteNonQuery() 'Ejecuta la consultax del papurri
+                    If resultado = 0 Then
+                        MessageBox.Show("No se actualizo el stock, ya que el resultado es negativo")
+                    End If
+
+                End Using
+            End Using
+
+            cargarinsumos()
+            cargarinsumosrecientes()  'recien me entero que se puede llamar a otras subrutinas dentro de otra, hago esto para ""Ahorrar"" tiempo, aunque ya es medio tarde para esto ahr
+        Catch ex As Exception
+
+        End Try
+    End Sub
 
 
 
@@ -125,14 +171,16 @@ Public Class UCinsumos
         GrillaPers.Personalizargrilla(dgwinsumos)
         cargarcombocategorias() 'primero COMBO,a a tener en cuenta para los siguientes apartados
         cargarinsumos()
-        GrillaPers.ColorearEstado(dgwinsumos)
+        GrillaPers.Personalizargrilla(dgvrecientes)
+        cargarinsumosrecientes()
+
 
     End Sub
 
 
     Private Sub registrarmovi_Click(sender As Object, e As EventArgs) Handles registrarmovi.Click
 
-        Using nuevoform As New UCinsumosañadir()
+        Using nuevoform As New UCinsumosañadir
             nuevoform.ShowDialog()
             cargarcombocategorias()
             'Mientras el nuevoform este abierto 
@@ -199,5 +247,28 @@ Public Class UCinsumos
 
     Private Sub combocategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combocategoria.SelectedIndexChanged
         cargarinsumos()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim stockactualizar As Integer 'Hago una variable para utilizar la subrutina 
+
+        If Integer.TryParse(stockcambiartxt.Text, stockactualizar) Then 'el tryparse pregunta si el valor es numerico y si se puede pasar a un integer, cuando se ejecuta, pasa el valor del textbox a stockactualizar
+            cambiarstock(stockactualizar) 'Como esto es para sumar, no le pongo el signo - 
+        Else
+            MessageBox.Show("Ingrese un valor valido para actualizar el stock")
+        End If
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        Dim stockactualizar As Integer 'Hago una variable para utilizar la subrutina
+
+        If Integer.TryParse(stockcambiartxt.Text, stockactualizar) Then
+            cambiarstock(-stockactualizar) 'Como esto es para restar, le pongo el signo -
+        Else
+            MessageBox.Show("Ingrese un valor valido para actualizar el stock")
+        End If
+
     End Sub
 End Class

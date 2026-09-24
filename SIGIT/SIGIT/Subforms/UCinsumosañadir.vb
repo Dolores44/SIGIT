@@ -79,10 +79,10 @@ Public Class UCinsumosañadir
 
     Private Sub Añadirbtn_Click(sender As Object, e As EventArgs) Handles Añadirbtn.Click
         'hago validaciones
-        If Not Validaciones.Validaciones(nombreinsumo, lblerrorinsumo, "Sin espacios o espacio vacio") Then Exit Sub
-        If Not Validaciones.Validaciones(stockacttxt, lblerrorsta, "Solo numeros") Then Exit Sub
-        If Not Validaciones.Validaciones(Stockmintxt, lblerrorsma, "Solo numeros") Then Exit Sub
-        If Not Validaciones.Validaciones(costoUnitxt, lblerrorcu, "Solo numeros") Then Exit Sub
+        If Not Validaciones.Validaciones(nombreinsumo, lblerrorinsumo, "Insumo") Then Exit Sub
+        If Not Validaciones.Validaciones(stockacttxt, lblerrorsta, "Stock actual") Then Exit Sub
+        If Not Validaciones.Validaciones(Stockmintxt, lblerrorsma, "Stock mínimo") Then Exit Sub
+        If Not Validaciones.Validaciones(costoUnitxt, lblerrorcu, "Costo unitario") Then Exit Sub
         If categoriabox.SelectedIndex = -1 Then Exit Sub
 
         Try

@@ -10,6 +10,12 @@
     <Compile Update="Subforms\UCinsumosañadir.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Subforms\UCproductosañadir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Subforms\UCproductovariante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserControl\UCclientes.vb">
       <SubType>UserControl</SubType>
     </Compile>

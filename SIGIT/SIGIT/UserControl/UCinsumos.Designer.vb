@@ -40,6 +40,10 @@ Partial Class UCinsumos
         labeltexto = New Label()
         dgwinsumos = New DataGridView()
         Panel2 = New Panel()
+        stockcambiartxt = New TextBox()
+        Button2 = New Button()
+        Button1 = New Button()
+        Label6 = New Label()
         nombreinsumolbl = New Label()
         stockvalorizadolbl = New Label()
         stockminlbl = New Label()
@@ -91,13 +95,13 @@ Partial Class UCinsumos
         registrarmovi.FlatStyle = FlatStyle.Flat
         registrarmovi.Font = New Font("Segoe UI", 10F)
         registrarmovi.ForeColor = Color.GhostWhite
-        registrarmovi.Image = My.Resources.Resources.añadir
+        registrarmovi.Image = My.Resources.Resources.modificar
         registrarmovi.ImageAlign = ContentAlignment.TopLeft
-        registrarmovi.Location = New Point(829, 46)
+        registrarmovi.Location = New Point(1035, 39)
         registrarmovi.Name = "registrarmovi"
         registrarmovi.Size = New Size(114, 31)
         registrarmovi.TabIndex = 9
-        registrarmovi.Text = "Registrar "
+        registrarmovi.Text = "Modificar"
         registrarmovi.TextImageRelation = TextImageRelation.ImageBeforeText
         registrarmovi.UseVisualStyleBackColor = False
         ' 
@@ -188,14 +192,15 @@ Partial Class UCinsumos
         descripciontxt.Multiline = True
         descripciontxt.Name = "descripciontxt"
         descripciontxt.PlaceholderText = "Descripción de insumo"
-        descripciontxt.Size = New Size(305, 49)
+        descripciontxt.ReadOnly = True
+        descripciontxt.Size = New Size(305, 44)
         descripciontxt.TabIndex = 14
         ' 
         ' stocklbl
         ' 
         stocklbl.AutoSize = True
         stocklbl.Font = New Font("Mongolian Baiti", 11F)
-        stocklbl.Location = New Point(38, 308)
+        stocklbl.Location = New Point(38, 325)
         stocklbl.Name = "stocklbl"
         stocklbl.Size = New Size(46, 16)
         stocklbl.TabIndex = 3
@@ -228,17 +233,21 @@ Partial Class UCinsumos
         ' 
         dgwinsumos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgwinsumos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgwinsumos.Location = New Point(75, 181)
+        dgwinsumos.Location = New Point(19, 181)
         dgwinsumos.MultiSelect = False
         dgwinsumos.Name = "dgwinsumos"
         dgwinsumos.ReadOnly = True
         dgwinsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgwinsumos.Size = New Size(720, 360)
+        dgwinsumos.Size = New Size(764, 360)
         dgwinsumos.TabIndex = 3
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
+        Panel2.Controls.Add(stockcambiartxt)
+        Panel2.Controls.Add(Button2)
+        Panel2.Controls.Add(Button1)
+        Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(nombreinsumolbl)
         Panel2.Controls.Add(stockvalorizadolbl)
         Panel2.Controls.Add(stockminlbl)
@@ -251,8 +260,57 @@ Partial Class UCinsumos
         Panel2.Controls.Add(stocklbl)
         Panel2.Location = New Point(829, 181)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(337, 360)
+        Panel2.Size = New Size(337, 377)
         Panel2.TabIndex = 18
+        ' 
+        ' stockcambiartxt
+        ' 
+        stockcambiartxt.Location = New Point(197, 299)
+        stockcambiartxt.Name = "stockcambiartxt"
+        stockcambiartxt.Size = New Size(46, 23)
+        stockcambiartxt.TabIndex = 20
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.GhostWhite
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Segoe UI", 10F)
+        Button2.ForeColor = Color.GhostWhite
+        Button2.Image = My.Resources.Resources.eliminar2
+        Button2.Location = New Point(156, 298)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(22, 23)
+        Button2.TabIndex = 26
+        Button2.TextImageRelation = TextImageRelation.ImageBeforeText
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.GhostWhite
+        Button1.FlatAppearance.BorderSize = 0
+        Button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Segoe UI", 10F)
+        Button1.ForeColor = Color.GhostWhite
+        Button1.Image = My.Resources.Resources.añadir2
+        Button1.Location = New Point(249, 298)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(22, 23)
+        Button1.TabIndex = 25
+        Button1.TextImageRelation = TextImageRelation.ImageBeforeText
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Mongolian Baiti", 11F)
+        Label6.Location = New Point(38, 300)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(112, 16)
+        Label6.TabIndex = 24
+        Label6.Text = "Actualizar stock:"
         ' 
         ' nombreinsumolbl
         ' 
@@ -270,7 +328,7 @@ Partial Class UCinsumos
         stockvalorizadolbl.BackColor = Color.White
         stockvalorizadolbl.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
         stockvalorizadolbl.ForeColor = Color.Black
-        stockvalorizadolbl.Location = New Point(249, 334)
+        stockvalorizadolbl.Location = New Point(249, 351)
         stockvalorizadolbl.Name = "stockvalorizadolbl"
         stockvalorizadolbl.Size = New Size(15, 17)
         stockvalorizadolbl.TabIndex = 22
@@ -282,7 +340,7 @@ Partial Class UCinsumos
         stockminlbl.BackColor = Color.White
         stockminlbl.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
         stockminlbl.ForeColor = Color.Black
-        stockminlbl.Location = New Point(145, 334)
+        stockminlbl.Location = New Point(145, 351)
         stockminlbl.Name = "stockminlbl"
         stockminlbl.Size = New Size(15, 17)
         stockminlbl.TabIndex = 21
@@ -294,7 +352,7 @@ Partial Class UCinsumos
         stockactuallbl.BackColor = Color.White
         stockactuallbl.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
         stockactuallbl.ForeColor = Color.Black
-        stockactuallbl.Location = New Point(40, 334)
+        stockactuallbl.Location = New Point(40, 351)
         stockactuallbl.Name = "stockactuallbl"
         stockactuallbl.Size = New Size(15, 17)
         stockactuallbl.TabIndex = 20
@@ -304,7 +362,7 @@ Partial Class UCinsumos
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Mongolian Baiti", 11F)
-        Label5.Location = New Point(228, 308)
+        Label5.Location = New Point(228, 325)
         Label5.Name = "Label5"
         Label5.Size = New Size(80, 16)
         Label5.TabIndex = 19
@@ -314,7 +372,7 @@ Partial Class UCinsumos
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Mongolian Baiti", 11F)
-        Label3.Location = New Point(128, 308)
+        Label3.Location = New Point(128, 325)
         Label3.Name = "Label3"
         Label3.Size = New Size(71, 16)
         Label3.TabIndex = 18
@@ -323,9 +381,9 @@ Partial Class UCinsumos
         ' Panel4
         ' 
         Panel4.Controls.Add(dgvrecientes)
-        Panel4.Location = New Point(73, 563)
+        Panel4.Location = New Point(19, 564)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1093, 124)
+        Panel4.Size = New Size(1147, 124)
         Panel4.TabIndex = 19
         ' 
         ' dgvrecientes
@@ -338,8 +396,8 @@ Partial Class UCinsumos
         dgvrecientes.Name = "dgvrecientes"
         dgvrecientes.ReadOnly = True
         dgvrecientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvrecientes.Size = New Size(1093, 124)
-        dgvrecientes.TabIndex = 4
+        dgvrecientes.Size = New Size(1147, 124)
+        dgvrecientes.TabIndex = 5
         ' 
         ' UCinsumos
         ' 
@@ -377,12 +435,10 @@ Partial Class UCinsumos
     Friend WithEvents dgwinsumos As DataGridView
     Friend WithEvents insumostotaleslbl As Label
     Friend WithEvents label4 As Label
-    Friend WithEvents descripciontxt As TextBox
     Friend WithEvents registrarmovi As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents dgvrecientes As DataGridView
     Friend WithEvents categorialbl As Label
     Friend WithEvents stockvalorizadolbl As Label
     Friend WithEvents stockminlbl As Label
@@ -390,5 +446,11 @@ Partial Class UCinsumos
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents nombreinsumolbl As Label
+    Private WithEvents descripciontxt As TextBox
+    Friend WithEvents dgvrecientes As DataGridView
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents stockcambiartxt As TextBox
 
 End Class

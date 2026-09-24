@@ -314,7 +314,7 @@ Partial Class UCinsumosañadir
         Editarcat.Name = "Editarcat"
         Editarcat.Size = New Size(148, 28)
         Editarcat.TabIndex = 14
-        Editarcat.Text = "Editar Categoría"
+        Editarcat.Text = "Editar Insumo"
         Editarcat.TextImageRelation = TextImageRelation.ImageBeforeText
         Editarcat.UseVisualStyleBackColor = False
         ' 
@@ -341,7 +341,7 @@ Partial Class UCinsumosañadir
         eliminarbtn.Name = "eliminarbtn"
         eliminarbtn.Size = New Size(148, 28)
         eliminarbtn.TabIndex = 11
-        eliminarbtn.Text = "Eliminar Categoria"
+        eliminarbtn.Text = "Eliminar Insumo"
         eliminarbtn.TextImageRelation = TextImageRelation.ImageBeforeText
         eliminarbtn.UseVisualStyleBackColor = False
         ' 
@@ -359,7 +359,7 @@ Partial Class UCinsumosañadir
         Añadirbtn.Name = "Añadirbtn"
         Añadirbtn.Size = New Size(148, 28)
         Añadirbtn.TabIndex = 9
-        Añadirbtn.Text = "Añadir Categoria"
+        Añadirbtn.Text = "Añadir Insumo"
         Añadirbtn.TextImageRelation = TextImageRelation.ImageBeforeText
         Añadirbtn.UseVisualStyleBackColor = False
         ' 
