@@ -54,9 +54,9 @@ Public Class UCproductos
     Private Sub Añadirbtn_Click(sender As Object, e As EventArgs) Handles Añadirbtn.Click
 
         ' abro el form de categorias
-        Using nuevoform As New UCproductoscategoria()
-            nuevoform.ShowDialog()
-            cargarproductos()
+        Using nuevoform As New UCproductoscategoria
+            nuevoform.ShowDialog
+            cargarproductos
         End Using
 
     End Sub
@@ -64,6 +64,13 @@ Public Class UCproductos
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Using newform As New UCproductosañadir()
             newform.ShowDialog()
+            cargarproductos()
+        End Using
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Using varianteform As New UCproductovariante
+            varianteform.ShowDialog()
             cargarproductos()
         End Using
     End Sub

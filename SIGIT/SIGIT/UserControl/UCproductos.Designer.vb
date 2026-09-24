@@ -24,6 +24,7 @@ Partial Class UCproductos
     Private Sub InitializeComponent()
         labeltexto = New Label()
         Panel1 = New Panel()
+        Button2 = New Button()
         Button1 = New Button()
         combocategoria = New ComboBox()
         Añadirbtn = New Button()
@@ -55,6 +56,7 @@ Partial Class UCproductos
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(combocategoria)
         Panel1.Controls.Add(Añadirbtn)
@@ -69,6 +71,24 @@ Partial Class UCproductos
         Panel1.Size = New Size(1224, 109)
         Panel1.TabIndex = 2
         ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(70), CByte(100))
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Segoe UI", 10F)
+        Button2.ForeColor = Color.GhostWhite
+        Button2.Image = My.Resources.Resources.añadir
+        Button2.ImageAlign = ContentAlignment.TopLeft
+        Button2.Location = New Point(935, 33)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(105, 48)
+        Button2.TabIndex = 12
+        Button2.Text = "Añadir Variante"
+        Button2.TextImageRelation = TextImageRelation.ImageBeforeText
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' Button1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
@@ -79,9 +99,9 @@ Partial Class UCproductos
         Button1.ForeColor = Color.GhostWhite
         Button1.Image = My.Resources.Resources.añadir
         Button1.ImageAlign = ContentAlignment.TopLeft
-        Button1.Location = New Point(1032, 33)
+        Button1.Location = New Point(1056, 33)
         Button1.Name = "Button1"
-        Button1.Size = New Size(148, 30)
+        Button1.Size = New Size(117, 48)
         Button1.TabIndex = 11
         Button1.Text = "Registrar Producto"
         Button1.TextImageRelation = TextImageRelation.ImageBeforeText
@@ -105,9 +125,9 @@ Partial Class UCproductos
         Añadirbtn.ForeColor = Color.GhostWhite
         Añadirbtn.Image = My.Resources.Resources.añadir
         Añadirbtn.ImageAlign = ContentAlignment.TopLeft
-        Añadirbtn.Location = New Point(847, 33)
+        Añadirbtn.Location = New Point(810, 33)
         Añadirbtn.Name = "Añadirbtn"
-        Añadirbtn.Size = New Size(136, 30)
+        Añadirbtn.Size = New Size(105, 48)
         Añadirbtn.TabIndex = 9
         Añadirbtn.Text = "Añadir Categoria"
         Añadirbtn.TextImageRelation = TextImageRelation.ImageBeforeText
@@ -118,7 +138,7 @@ Partial Class UCproductos
         Label2.BackColor = Color.FromArgb(CByte(28), CByte(45), CByte(58))
         Label2.Location = New Point(799, 33)
         Label2.Name = "Label2"
-        Label2.Size = New Size(5, 30)
+        Label2.Size = New Size(5, 48)
         Label2.TabIndex = 0
         ' 
         ' dashboardbtn
@@ -209,5 +229,6 @@ Partial Class UCproductos
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents FLPproductos As FlowLayoutPanel
+    Friend WithEvents Button2 As Button
 
 End Class

@@ -72,7 +72,7 @@ Public Class UCinsumos
                 'un case, pero en consulta!! es muy util esto, lo que hace investigar loco
 
                 'aplico el filtro para buscar segun el usuario
-                If buscartxt.Text <> "" Then
+                If buscartxt.Text <> "" Then 'operador distinto, si el txtbox no esta vacio, entonces agrega el AND
                     sql = sql & "AND nombre LIKE @busqueda "
                 End If
 
@@ -269,6 +269,14 @@ Public Class UCinsumos
         Else
             MessageBox.Show("Ingrese un valor valido para actualizar el stock")
         End If
+
+    End Sub
+
+    Private Sub labeltexto_Click(sender As Object, e As EventArgs) Handles labeltexto.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

@@ -57,7 +57,7 @@
 - [ ] Productos (UCproductos)
   - [x] Catalogo en tarjetas (FlowLayoutPanel + UcTarjetaProducto)
   - [ ] Paginacion con LIMIT/OFFSET
-  - [ ] Alta/edicion de producto y variante
+  - [X] Alta/edicion de producto y variante
 - [ ] Stock (UCstock)
 - [X] Insumos (UCinsumos)
 - [ ] Produccion (UCproduccion)
