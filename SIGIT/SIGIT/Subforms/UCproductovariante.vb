@@ -27,6 +27,8 @@ Public Class UCproductovariante
 
     End Sub
 
+
+
     Private Sub vaciartxt()
 
         colortxt.Text = ""
@@ -62,6 +64,10 @@ Public Class UCproductovariante
                     cmd.Parameters.AddWithValue("@otra_caracteristica", carectxt.Text.Trim())
 
                     Dim resultado As Integer = cmd.ExecuteNonQuery()
+
+                    Dim cmdId As New MySqlCommand("SELECT LAST_INSERT_ID();", cn) 'Saco el ultimo id, para usarlo en ficha tecnica
+                    Dim idVariante As Integer = Convert.ToInt32(cmdId.ExecuteScalar()) ' yo convierto a entero, porque el id es un numero entero
+
                     MessageBox.Show("Producto variante añadido!!" & resultado)
 
                 End Using
@@ -70,6 +76,20 @@ Public Class UCproductovariante
         Catch ex As Exception
             MessageBox.Show("Error" & ex.Message)
         End Try
+    End Sub
+
+    Private Sub añadirfichatecnica()
+        If Not Validaciones.Validaciones(cantidadinsumos, cantinsumoslbl, "Insumos") Then Exit Sub
+
+        Try
+            Using cn As New MySqlConnection(CADENA)
+                cn.Open()
+
+            End Using
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub UCproductovariante_Load(sender As Object, e As EventArgs) Handles MyBase.Load

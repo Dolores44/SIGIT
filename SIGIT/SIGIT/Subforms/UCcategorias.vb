@@ -1,6 +1,6 @@
 ﻿Imports MySqlConnector
 
-Public Class UCproductoscategoria
+Public Class UCcategorias
 
 
     Private Sub cargarcategorias()

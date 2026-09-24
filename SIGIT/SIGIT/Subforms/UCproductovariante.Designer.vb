@@ -65,9 +65,10 @@ Partial Class UCproductovariante
         dgwinsumos = New DataGridView()
         Label21 = New Label()
         ComboBox1 = New ComboBox()
-        TextBox4 = New TextBox()
+        cantidadinsumos = New TextBox()
         Label20 = New Label()
         Label19 = New Label()
+        cantinsumoslbl = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -86,7 +87,7 @@ Partial Class UCproductovariante
         labeltexto.RightToLeft = RightToLeft.No
         labeltexto.Size = New Size(1201, 38)
         labeltexto.TabIndex = 1
-        labeltexto.Text = "     SECCIÒN AÑADIR UN PRODUCTO"
+        labeltexto.Text = "     SECCIÒN AÑADIR UNA VARIANTE Y SU FICHA"
         labeltexto.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Panel1
@@ -453,6 +454,7 @@ Partial Class UCproductovariante
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(cantinsumoslbl)
         Panel2.Controls.Add(productovarianteficha)
         Panel2.Controls.Add(Label22)
         Panel2.Controls.Add(Button2)
@@ -461,7 +463,7 @@ Partial Class UCproductovariante
         Panel2.Controls.Add(dgwinsumos)
         Panel2.Controls.Add(Label21)
         Panel2.Controls.Add(ComboBox1)
-        Panel2.Controls.Add(TextBox4)
+        Panel2.Controls.Add(cantidadinsumos)
         Panel2.Controls.Add(Label20)
         Panel2.Controls.Add(Label19)
         Panel2.Dock = DockStyle.Left
@@ -549,7 +551,7 @@ Partial Class UCproductovariante
         ' 
         dgwinsumos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgwinsumos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgwinsumos.Location = New Point(48, 103)
+        dgwinsumos.Location = New Point(48, 126)
         dgwinsumos.MultiSelect = False
         dgwinsumos.Name = "dgwinsumos"
         dgwinsumos.ReadOnly = True
@@ -576,14 +578,14 @@ Partial Class UCproductovariante
         ComboBox1.Size = New Size(192, 23)
         ComboBox1.TabIndex = 41
         ' 
-        ' TextBox4
+        ' cantidadinsumos
         ' 
-        TextBox4.BackColor = Color.Lavender
-        TextBox4.Location = New Point(307, 74)
-        TextBox4.Name = "TextBox4"
-        TextBox4.PlaceholderText = "Cantidad de insumo"
-        TextBox4.Size = New Size(192, 23)
-        TextBox4.TabIndex = 40
+        cantidadinsumos.BackColor = Color.Lavender
+        cantidadinsumos.Location = New Point(307, 74)
+        cantidadinsumos.Name = "cantidadinsumos"
+        cantidadinsumos.PlaceholderText = "Cantidad de insumo"
+        cantidadinsumos.Size = New Size(192, 23)
+        cantidadinsumos.TabIndex = 40
         ' 
         ' Label20
         ' 
@@ -605,6 +607,14 @@ Partial Class UCproductovariante
         Label19.TabIndex = 40
         Label19.Text = "Ficha Tecnica:"
         ' 
+        ' cantinsumoslbl
+        ' 
+        cantinsumoslbl.Font = New Font("Yu Gothic UI Light", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        cantinsumoslbl.Location = New Point(307, 100)
+        cantinsumoslbl.Name = "cantinsumoslbl"
+        cantinsumoslbl.Size = New Size(141, 16)
+        cantinsumoslbl.TabIndex = 73
+        ' 
         ' UCproductovariante
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -615,7 +625,7 @@ Partial Class UCproductovariante
         Controls.Add(Panel1)
         Controls.Add(labeltexto)
         Name = "UCproductovariante"
-        Text = "Añadir categorias"
+        Text = "Añadir cositas ah"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -658,7 +668,7 @@ Partial Class UCproductovariante
     Friend WithEvents Label19 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents cantidadinsumos As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents añdinsumopr As Button
     Friend WithEvents dgwinsumos As DataGridView
@@ -671,5 +681,6 @@ Partial Class UCproductovariante
     Friend WithEvents talletxt As TextBox
     Friend WithEvents validacionstockactuallbl As Label
     Friend WithEvents validaiconstockminimolbl As Label
+    Friend WithEvents cantinsumoslbl As Label
 
 End Class

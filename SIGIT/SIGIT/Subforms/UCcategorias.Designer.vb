@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class UCproductoscategoria
+Partial Class UCcategorias
     Inherits System.Windows.Forms.Form
 
     'UserControl reemplaza a Dispose para limpiar la lista de componentes.

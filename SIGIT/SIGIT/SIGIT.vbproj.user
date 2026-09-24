@@ -34,7 +34,7 @@
     <Compile Update="UserControl\UCproductos.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Subforms\UCproductoscategoria.vb">
+    <Compile Update="Subforms\UCcategorias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControl\UCproductoslista.vb">
